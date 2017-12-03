@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243A52AF1FD47F340063CD54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A52AE1FD47F340063CD54 /* Constants.swift */; };
+		243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DA4111FD42BFF00D073C2 /* OffersService.swift */; };
 		24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF61FD2EB490002B1F5 /* AppDelegate.swift */; };
 		24847EF91FD2EB490002B1F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF81FD2EB490002B1F5 /* ViewController.swift */; };
 		24847EFC1FD2EB490002B1F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFA1FD2EB490002B1F5 /* Main.storyboard */; };
 		24847EFE1FD2EB490002B1F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFD1FD2EB490002B1F5 /* Assets.xcassets */; };
 		24847F011FD2EB490002B1F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFF1FD2EB490002B1F5 /* LaunchScreen.storyboard */; };
+		24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1CF1FD468B000CD0392 /* Bonuses.swift */; };
+		24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D11FD468BB00CD0392 /* Equipment.swift */; };
+		24B9B1D41FD468CD00CD0392 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D31FD468CD00CD0392 /* Base.swift */; };
+		24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D51FD468DB00CD0392 /* Methodology.swift */; };
+		24B9B1D81FD468E100CD0392 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D71FD468E100CD0392 /* Result.swift */; };
+		24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D91FD468E900CD0392 /* Specifics.swift */; };
 		326D61E1992C39FF9F4D61BC /* Pods_itjobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0247FD9054627C6DDE2538EE /* Pods-itjobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.release.xcconfig"; sourceTree = "<group>"; };
+		243A52AE1FD47F340063CD54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		243DA4111FD42BFF00D073C2 /* OffersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		24847EF31FD2EB490002B1F5 /* itjobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itjobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24847EF61FD2EB490002B1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24847EF81FD2EB490002B1F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +34,12 @@
 		24847EFD1FD2EB490002B1F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24847F001FD2EB490002B1F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24847F021FD2EB490002B1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24B9B1CF1FD468B000CD0392 /* Bonuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bonuses.swift; sourceTree = "<group>"; };
+		24B9B1D11FD468BB00CD0392 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		24B9B1D31FD468CD00CD0392 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		24B9B1D51FD468DB00CD0392 /* Methodology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methodology.swift; sourceTree = "<group>"; };
+		24B9B1D71FD468E100CD0392 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		24B9B1D91FD468E900CD0392 /* Specifics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specifics.swift; sourceTree = "<group>"; };
 		787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itjobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD29C277B0E8E1A88286E3 /* Pods-itjobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +56,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245757421FD42E3000C9B085 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24B9B1CF1FD468B000CD0392 /* Bonuses.swift */,
+				24B9B1D11FD468BB00CD0392 /* Equipment.swift */,
+				24B9B1D31FD468CD00CD0392 /* Base.swift */,
+				24B9B1D51FD468DB00CD0392 /* Methodology.swift */,
+				24B9B1D71FD468E100CD0392 /* Result.swift */,
+				24B9B1D91FD468E900CD0392 /* Specifics.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		24847EEA1FD2EB490002B1F5 = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +90,25 @@
 		24847EF51FD2EB490002B1F5 /* itjobs */ = {
 			isa = PBXGroup;
 			children = (
+				245757421FD42E3000C9B085 /* Models */,
+				24B5ED741FD32ACF002C9C86 /* Services */,
 				24847EF61FD2EB490002B1F5 /* AppDelegate.swift */,
 				24847EF81FD2EB490002B1F5 /* ViewController.swift */,
 				24847EFA1FD2EB490002B1F5 /* Main.storyboard */,
 				24847EFD1FD2EB490002B1F5 /* Assets.xcassets */,
 				24847EFF1FD2EB490002B1F5 /* LaunchScreen.storyboard */,
 				24847F021FD2EB490002B1F5 /* Info.plist */,
+				243A52AE1FD47F340063CD54 /* Constants.swift */,
 			);
 			path = itjobs;
+			sourceTree = "<group>";
+		};
+		24B5ED741FD32ACF002C9C86 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				243DA4111FD42BFF00D073C2 /* OffersService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5342A4A561B4119F420526CC /* Frameworks */ = {
@@ -185,10 +225,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-itjobs/Pods-itjobs-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,7 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				24847EF91FD2EB490002B1F5 /* ViewController.swift in Sources */,
+				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
+				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
+				24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */,
+				24B9B1D81FD468E100CD0392 /* Result.swift in Sources */,
+				243A52AF1FD47F340063CD54 /* Constants.swift in Sources */,
+				243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */,
+				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
+				24B9B1D41FD468CD00CD0392 /* Base.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.smajek.itjobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -377,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pl.smajek.itjobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

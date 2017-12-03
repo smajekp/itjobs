@@ -6,6 +6,8 @@ target 'itjobs' do
   use_frameworks!
 
   # Pods for itjobs
-  pod 'Alamofire', '~> 4.5'
+  pod 'Alamofire', '~> 4.5.1'
+  pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'ObjectMapper', '~> 3.1.0'
 
 end
