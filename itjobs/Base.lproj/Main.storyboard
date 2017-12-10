@@ -81,7 +81,9 @@
                             <outlet property="delegate" destination="hnA-dm-gft" id="Byu-9y-s17"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NG1-Qc-pP8"/>
+                    <navigationItem key="navigationItem" id="NG1-Qc-pP8">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="Lqw-Pc-nTD"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="i5L-dI-41T" kind="show" identifier="favouriteOfferDetailsSegue" id="4OT-dO-gce"/>
                     </connections>
@@ -159,7 +161,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z0f-3m-hZT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dlq-gx-qlC"/>
+                    <navigationItem key="navigationItem" id="dlq-gx-qlC">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="8J8-4u-pNE"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TII-Vx-XyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +252,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LVO-3k-2bx"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mhy-hV-WFL"/>
+                    <navigationItem key="navigationItem" id="Mhy-hV-WFL">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="0Vf-or-OLQ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="label" destination="T0l-bg-XtE" id="LWi-uD-psO"/>
                     </connections>
@@ -524,7 +530,9 @@
                             <outlet property="delegate" destination="QLc-2f-9Xg" id="pZV-uU-x2k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="INX-EZ-Zr7"/>
+                    <navigationItem key="navigationItem" id="INX-EZ-Zr7">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="Nxy-u2-QpZ"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="l6d-eq-zsJ" kind="show" identifier="offerDetailsSegue" id="pfR-it-Xhz"/>
                     </connections>

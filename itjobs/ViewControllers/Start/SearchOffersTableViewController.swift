@@ -7,13 +7,43 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireObjectMapper
+import ObjectMapper
 
 class SearchOffersTableViewController: UITableViewController{
     
     let animals = ["Panda", "Lion", "Elefant"]
+    var resultOffers = [Offer]()
+    var activityView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityView.center = CGPoint(x: self.view.center.x,y: 100);
+        activityView.startAnimating()
+        self.view.addSubview(activityView)
+        
+        getOffers(pageNumber: 1)
+    }
+    
+    func getOffers(pageNumber: Int) {
+        let offersService = OffersService()
+        offersService.getOffers(pageNumber: pageNumber, completionHandler: { responseObject, error in
+            if error == nil {
+                //print(responseObject!)
+                if let responseObject = responseObject {
+                    self.resultOffers = responseObject
+                    self.activityView.removeFromSuperview()
+                    
+                    self.tableView.reloadData()
+                    //self.setupView(resource: responseObject)
+                    //self.showLoginVC()
+                }
+            }
+            return
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +52,14 @@ class SearchOffersTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (animals.count)
+        return (self.resultOffers.count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchOfferCell", for: indexPath) as! OffersTableViewCell
         
         //cell.myImage.image = UIImage(named: (animals[indexPath.row] + ".jpg"))
-        cell.offerTitle?.text = animals[indexPath.row]
+        cell.offerTitle?.text = self.resultOffers[indexPath.row].title
 //        cell.offerSubtitle?.text = animals[indexPath.row]
         
         return cell
@@ -40,8 +70,8 @@ class SearchOffersTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var titleLabel: String = animals[indexPath.row]
-       performSegue(withIdentifier: "searchOfferDetailsSegue", sender: titleLabel)
+        var offer: Offer = resultOffers[indexPath.row]
+       performSegue(withIdentifier: "searchOfferDetailsSegue", sender: offer)
     }
     
     //  Converted to Swift 4 with Swiftify v1.0.6536 - https://objectivec2swift.com/
@@ -49,8 +79,8 @@ class SearchOffersTableViewController: UITableViewController{
         if segue.identifier == "searchOfferDetailsSegue" {
             if (segue.destination is SearchOfferDetailsViewController) {
                 let detailsController = segue.destination as? SearchOfferDetailsViewController
-                if (sender is String) {
-                    detailsController?.titleLabelText = sender as! String
+                if (sender is Offer) {
+                    detailsController?.offer = sender as! Offer
                 }
             }
         }

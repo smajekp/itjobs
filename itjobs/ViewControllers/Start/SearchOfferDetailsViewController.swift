@@ -12,11 +12,14 @@ class SearchOfferDetailsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    var titleLabelText: String! = ""
+    var offer: Offer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleLabel.text = titleLabelText
+        self.setupNavigationBar()
+        self.titleLabel.text = offer.title
+        
 
         // Do any additional setup after loading the view.
     }
@@ -24,6 +27,13 @@ class SearchOfferDetailsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupNavigationBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = "Powrót"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        self.title = "Oferta"
     }
     
 

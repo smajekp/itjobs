@@ -1,16 +1,16 @@
 //
-//  Base.swift
+//  OffersResponse.swift
 //  itjobs
 //
-//  Created by Piotrek on 03.12.2017.
+//  Created by Piotrek on 10.12.2017.
 //  Copyright © 2017 Piotr Smajek. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
-class Base:Mappable {
+class OffersResponse:Mappable {
     var status : Bool?
-    var result : Result?
+    var result : [Offer]?
     
     required init?(map: Map){
         
@@ -23,5 +23,3 @@ class Base:Mappable {
     
     
 }
-
-

@@ -9,7 +9,7 @@
 import ObjectMapper
 import Foundation
 
-class Result: Mappable {
+class Offer: Mappable {
     var id : Int?
     var is_active : Int?
     var language : String?
