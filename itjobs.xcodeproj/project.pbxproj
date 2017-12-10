@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9921FDC7C140053AA26 /* LoginViewController.swift */; };
+		242AF9951FDC7C140053AA26 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9931FDC7C140053AA26 /* LoginViewController.xib */; };
+		242AF9AA1FDC7D2B0053AA26 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */; };
+		242AF9AB1FDC7D2B0053AA26 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */; };
+		242AF9AC1FDC7D2B0053AA26 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99B1FDC7D2A0053AA26 /* Raleway-ExtraBold.ttf */; };
+		242AF9AD1FDC7D2B0053AA26 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99C1FDC7D2A0053AA26 /* Raleway-ExtraLight.ttf */; };
+		242AF9AE1FDC7D2B0053AA26 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99D1FDC7D2A0053AA26 /* Raleway-Medium.ttf */; };
+		242AF9AF1FDC7D2B0053AA26 /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99E1FDC7D2A0053AA26 /* Raleway-ExtraLightItalic.ttf */; };
+		242AF9B01FDC7D2B0053AA26 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99F1FDC7D2A0053AA26 /* Raleway-Light.ttf */; };
+		242AF9B11FDC7D2B0053AA26 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A01FDC7D2A0053AA26 /* Raleway-SemiBold.ttf */; };
+		242AF9B21FDC7D2B0053AA26 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A11FDC7D2B0053AA26 /* Raleway-Thin.ttf */; };
+		242AF9B31FDC7D2B0053AA26 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A21FDC7D2B0053AA26 /* Raleway-LightItalic.ttf */; };
+		242AF9B41FDC7D2B0053AA26 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A31FDC7D2B0053AA26 /* Raleway-MediumItalic.ttf */; };
+		242AF9B51FDC7D2B0053AA26 /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A41FDC7D2B0053AA26 /* Raleway-ExtraBoldItalic.ttf */; };
+		242AF9B61FDC7D2B0053AA26 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A51FDC7D2B0053AA26 /* Raleway-BlackItalic.ttf */; };
+		242AF9B71FDC7D2B0053AA26 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A61FDC7D2B0053AA26 /* Raleway-Bold.ttf */; };
+		242AF9B81FDC7D2B0053AA26 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A71FDC7D2B0053AA26 /* Raleway-ThinItalic.ttf */; };
+		242AF9B91FDC7D2B0053AA26 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A81FDC7D2B0053AA26 /* Raleway-Italic.ttf */; };
+		242AF9BA1FDC7D2B0053AA26 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9A91FDC7D2B0053AA26 /* Raleway-Regular.ttf */; };
+		242AF9BD1FDC8C8E0053AA26 /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9BC1FDC8C8E0053AA26 /* UIColor+HexColor.swift */; };
+		242AF9BF1FDC8CB00053AA26 /* UITextField+BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9BE1FDC8CB00053AA26 /* UITextField+BottomBorder.swift */; };
+		242AF9CA1FDC90750053AA26 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9C81FDC90750053AA26 /* OffersViewController.swift */; };
+		242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */; };
+		242AF9D31FDCA4B20053AA26 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */; };
 		243A52AF1FD47F340063CD54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A52AE1FD47F340063CD54 /* Constants.swift */; };
 		243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DA4111FD42BFF00D073C2 /* OffersService.swift */; };
 		24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF61FD2EB490002B1F5 /* AppDelegate.swift */; };
@@ -25,6 +49,30 @@
 
 /* Begin PBXFileReference section */
 		0247FD9054627C6DDE2538EE /* Pods-itjobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.release.xcconfig"; sourceTree = "<group>"; };
+		242AF9921FDC7C140053AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		242AF9931FDC7C140053AA26 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		242AF99B1FDC7D2A0053AA26 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		242AF99C1FDC7D2A0053AA26 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		242AF99D1FDC7D2A0053AA26 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		242AF99E1FDC7D2A0053AA26 /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLightItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		242AF99F1FDC7D2A0053AA26 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		242AF9A01FDC7D2A0053AA26 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		242AF9A11FDC7D2B0053AA26 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		242AF9A21FDC7D2B0053AA26 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-LightItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		242AF9A31FDC7D2B0053AA26 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-MediumItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		242AF9A41FDC7D2B0053AA26 /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		242AF9A51FDC7D2B0053AA26 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BlackItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		242AF9A61FDC7D2B0053AA26 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		242AF9A71FDC7D2B0053AA26 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ThinItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		242AF9A81FDC7D2B0053AA26 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Italic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		242AF9A91FDC7D2B0053AA26 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		242AF9BC1FDC8C8E0053AA26 /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
+		242AF9BE1FDC8CB00053AA26 /* UITextField+BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+BottomBorder.swift"; sourceTree = "<group>"; };
+		242AF9C81FDC90750053AA26 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
+		242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		243A52AE1FD47F340063CD54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		243DA4111FD42BFF00D073C2 /* OffersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		24847EF31FD2EB490002B1F5 /* itjobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itjobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +104,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242AF9911FDC6AB50053AA26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24847EF81FD2EB490002B1F5 /* ViewController.swift */,
+				242AF9921FDC7C140053AA26 /* LoginViewController.swift */,
+				242AF9C81FDC90750053AA26 /* OffersViewController.swift */,
+				242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		242AF9961FDC7C1E0053AA26 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				242AF9931FDC7C140053AA26 /* LoginViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		242AF9971FDC7CFF0053AA26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				242AF9A51FDC7D2B0053AA26 /* Raleway-BlackItalic.ttf */,
+				242AF9A61FDC7D2B0053AA26 /* Raleway-Bold.ttf */,
+				242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */,
+				242AF99B1FDC7D2A0053AA26 /* Raleway-ExtraBold.ttf */,
+				242AF9A41FDC7D2B0053AA26 /* Raleway-ExtraBoldItalic.ttf */,
+				242AF99C1FDC7D2A0053AA26 /* Raleway-ExtraLight.ttf */,
+				242AF99E1FDC7D2A0053AA26 /* Raleway-ExtraLightItalic.ttf */,
+				242AF9A81FDC7D2B0053AA26 /* Raleway-Italic.ttf */,
+				242AF99F1FDC7D2A0053AA26 /* Raleway-Light.ttf */,
+				242AF9A21FDC7D2B0053AA26 /* Raleway-LightItalic.ttf */,
+				242AF99D1FDC7D2A0053AA26 /* Raleway-Medium.ttf */,
+				242AF9A31FDC7D2B0053AA26 /* Raleway-MediumItalic.ttf */,
+				242AF9A91FDC7D2B0053AA26 /* Raleway-Regular.ttf */,
+				242AF9A01FDC7D2A0053AA26 /* Raleway-SemiBold.ttf */,
+				242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */,
+				242AF9A11FDC7D2B0053AA26 /* Raleway-Thin.ttf */,
+				242AF9A71FDC7D2B0053AA26 /* Raleway-ThinItalic.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		242AF9BB1FDC8C300053AA26 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				242AF9BC1FDC8C8E0053AA26 /* UIColor+HexColor.swift */,
+				242AF9BE1FDC8CB00053AA26 /* UITextField+BottomBorder.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		242AF9D01FDC90B50053AA26 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		245757421FD42E3000C9B085 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +198,14 @@
 		24847EF51FD2EB490002B1F5 /* itjobs */ = {
 			isa = PBXGroup;
 			children = (
+				242AF9D01FDC90B50053AA26 /* CustomCells */,
+				242AF9BB1FDC8C300053AA26 /* Categories */,
+				242AF9971FDC7CFF0053AA26 /* Resources */,
+				242AF9911FDC6AB50053AA26 /* ViewControllers */,
+				242AF9961FDC7C1E0053AA26 /* UI */,
 				245757421FD42E3000C9B085 /* Models */,
 				24B5ED741FD32ACF002C9C86 /* Services */,
 				24847EF61FD2EB490002B1F5 /* AppDelegate.swift */,
-				24847EF81FD2EB490002B1F5 /* ViewController.swift */,
 				24847EFA1FD2EB490002B1F5 /* Main.storyboard */,
 				24847EFD1FD2EB490002B1F5 /* Assets.xcassets */,
 				24847EFF1FD2EB490002B1F5 /* LaunchScreen.storyboard */,
@@ -190,9 +302,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242AF9B01FDC7D2B0053AA26 /* Raleway-Light.ttf in Resources */,
+				242AF9B71FDC7D2B0053AA26 /* Raleway-Bold.ttf in Resources */,
+				242AF9AF1FDC7D2B0053AA26 /* Raleway-ExtraLightItalic.ttf in Resources */,
+				242AF9AD1FDC7D2B0053AA26 /* Raleway-ExtraLight.ttf in Resources */,
+				242AF9B31FDC7D2B0053AA26 /* Raleway-LightItalic.ttf in Resources */,
+				242AF9B51FDC7D2B0053AA26 /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				242AF9B91FDC7D2B0053AA26 /* Raleway-Italic.ttf in Resources */,
+				242AF9AA1FDC7D2B0053AA26 /* Raleway-SemiBoldItalic.ttf in Resources */,
+				242AF9951FDC7C140053AA26 /* LoginViewController.xib in Resources */,
 				24847F011FD2EB490002B1F5 /* LaunchScreen.storyboard in Resources */,
+				242AF9BA1FDC7D2B0053AA26 /* Raleway-Regular.ttf in Resources */,
+				242AF9AE1FDC7D2B0053AA26 /* Raleway-Medium.ttf in Resources */,
+				242AF9AB1FDC7D2B0053AA26 /* Raleway-BoldItalic.ttf in Resources */,
 				24847EFE1FD2EB490002B1F5 /* Assets.xcassets in Resources */,
+				242AF9B21FDC7D2B0053AA26 /* Raleway-Thin.ttf in Resources */,
+				242AF9B11FDC7D2B0053AA26 /* Raleway-SemiBold.ttf in Resources */,
+				242AF9B41FDC7D2B0053AA26 /* Raleway-MediumItalic.ttf in Resources */,
+				242AF9B81FDC7D2B0053AA26 /* Raleway-ThinItalic.ttf in Resources */,
 				24847EFC1FD2EB490002B1F5 /* Main.storyboard in Resources */,
+				242AF9AC1FDC7D2B0053AA26 /* Raleway-ExtraBold.ttf in Resources */,
+				242AF9B61FDC7D2B0053AA26 /* Raleway-BlackItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,15 +392,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				24847EF91FD2EB490002B1F5 /* ViewController.swift in Sources */,
+				242AF9BD1FDC8C8E0053AA26 /* UIColor+HexColor.swift in Sources */,
 				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
 				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
+				242AF9D31FDCA4B20053AA26 /* OfferDetailsViewController.swift in Sources */,
 				24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */,
+				242AF9CA1FDC90750053AA26 /* OffersViewController.swift in Sources */,
 				24B9B1D81FD468E100CD0392 /* Result.swift in Sources */,
 				243A52AF1FD47F340063CD54 /* Constants.swift in Sources */,
+				242AF9BF1FDC8CB00053AA26 /* UITextField+BottomBorder.swift in Sources */,
 				243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */,
 				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
+				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* Base.swift in Sources */,
+				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

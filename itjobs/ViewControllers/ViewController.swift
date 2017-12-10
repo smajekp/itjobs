@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     var result = Result()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         getOffer(offerNumber: 171)
     }
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
                 if let responseObject = responseObject {
                     self.result = responseObject
                     self.setupView(resource: responseObject)
+                    //self.showLoginVC()
                 }
             }
             return
@@ -38,6 +40,11 @@ class ViewController: UIViewController {
     
     func setupView(resource: Result) {
         self.label.text = resource.city
+    }
+    
+    func showLoginVC() {
+        let vc = LoginViewController() //change this to your class name
+        self.present(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
