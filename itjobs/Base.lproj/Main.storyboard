@@ -42,16 +42,57 @@
             </objects>
             <point key="canvasLocation" x="-247" y="328"/>
         </scene>
-        <!--Profil-->
+        <!--Login View Controller-->
         <scene sceneID="DFp-R7-ca1">
             <objects>
-                <viewController id="c6A-lh-pZe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="c6A-lh-pZe" customClass="LoginViewController" customModule="itjobs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vnR-14-5GY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-3m-foL">
-                                <rect key="frame" x="166" y="75" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logowanie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-3m-foL">
+                                <rect key="frame" x="102" y="75" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooo-4v-PMe">
+                                <rect key="frame" x="138" y="562" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Zarejestruj sie"/>
+                                <connections>
+                                    <segue destination="FEd-IX-xmg" kind="show" id="Wcu-F5-Fna"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-rP-rMT">
+                                <rect key="frame" x="138" y="498" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Zaloguj sie"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="c6A-lh-pZe" eventType="touchUpInside" id="QZH-Hw-8X5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Z0f-3m-hZT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlq-gx-qlC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TII-Vx-XyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584.79999999999995" y="1089.8050974512744"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6EN-Xy-QLS">
+            <objects>
+                <viewController id="FEd-IX-xmg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHc-MD-jjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zarejestruj sie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiE-EP-i1t">
+                                <rect key="frame" x="91" y="203" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -59,13 +100,44 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Z0f-3m-hZT"/>
+                        <viewLayoutGuide key="safeArea" id="hHb-Y5-oXo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profil" image="user" selectedImage="user" id="zEr-Gu-alg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TII-Vx-XyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0Z-k0-i16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-247" y="1091"/>
+            <point key="canvasLocation" x="1301.5999999999999" y="1088.9055472263869"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="U0P-5T-qbA">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="qha-6u-JLQ" customClass="UserProfileViewController" customModule="itjobs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7Y-uy-wuX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zalogowany" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-Za-R5e">
+                                <rect key="frame" x="99" y="111" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcO-dn-pMv">
+                                <rect key="frame" x="99" y="549" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wyloguj sie"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="qha-6u-JLQ" eventType="touchUpInside" id="Gih-Kj-QFS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="o0I-I0-cOr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ib-q7-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="1857"/>
         </scene>
         <!--Start-->
         <scene sceneID="MuR-Xs-WOX">
@@ -187,7 +259,7 @@
                         <segue destination="KpV-Dv-nUM" kind="relationship" relationship="viewControllers" id="vx9-gT-zZA"/>
                         <segue destination="rAS-KN-xMj" kind="relationship" relationship="viewControllers" id="dKa-oq-gSC"/>
                         <segue destination="0TA-dk-c6B" kind="relationship" relationship="viewControllers" id="UVv-UY-1HU"/>
-                        <segue destination="c6A-lh-pZe" kind="relationship" relationship="viewControllers" id="FWl-Z9-wgU"/>
+                        <segue destination="WQ6-ny-mc3" kind="relationship" relationship="viewControllers" id="FWl-Z9-wgU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-q3-Ji8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,6 +284,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0g6-Uj-Vmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-248" y="-1163.1184407796102"/>
+        </scene>
+        <!--Profil-->
+        <scene sceneID="2SD-Zi-8eE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WQ6-ny-mc3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="user" selectedImage="user" id="zEr-Gu-alg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E8j-8Y-7jd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c6A-lh-pZe" kind="relationship" relationship="rootViewController" id="3vP-Jh-C9F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdf-eN-SJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="1090.2548725637182"/>
         </scene>
     </scenes>
     <resources>

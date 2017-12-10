@@ -33,6 +33,7 @@
 		242AF9D31FDCA4B20053AA26 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */; };
 		243A52AF1FD47F340063CD54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A52AE1FD47F340063CD54 /* Constants.swift */; };
 		243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DA4111FD42BFF00D073C2 /* OffersService.swift */; };
+		2440046C1FDD82F30032EB7E /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */; };
 		24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF61FD2EB490002B1F5 /* AppDelegate.swift */; };
 		24847EF91FD2EB490002B1F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF81FD2EB490002B1F5 /* ViewController.swift */; };
 		24847EFC1FD2EB490002B1F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFA1FD2EB490002B1F5 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		243A52AE1FD47F340063CD54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		243DA4111FD42BFF00D073C2 /* OffersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
+		2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		24847EF31FD2EB490002B1F5 /* itjobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itjobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24847EF61FD2EB490002B1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24847EF81FD2EB490002B1F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,10 +109,8 @@
 		242AF9911FDC6AB50053AA26 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				24847EF81FD2EB490002B1F5 /* ViewController.swift */,
-				242AF9921FDC7C140053AA26 /* LoginViewController.swift */,
-				242AF9C81FDC90750053AA26 /* OffersViewController.swift */,
-				242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */,
+				244004681FDD807A0032EB7E /* Profil */,
+				244004671FDD80460032EB7E /* Start */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +162,25 @@
 				242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		244004671FDD80460032EB7E /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				24847EF81FD2EB490002B1F5 /* ViewController.swift */,
+				242AF9C81FDC90750053AA26 /* OffersViewController.swift */,
+				242AF9D11FDCA4B20053AA26 /* OfferDetailsViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		244004681FDD807A0032EB7E /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				242AF9921FDC7C140053AA26 /* LoginViewController.swift */,
+				2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */,
+			);
+			path = Profil;
 			sourceTree = "<group>";
 		};
 		245757421FD42E3000C9B085 /* Models */ = {
@@ -396,6 +415,7 @@
 				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
 				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
 				242AF9D31FDCA4B20053AA26 /* OfferDetailsViewController.swift in Sources */,
+				2440046C1FDD82F30032EB7E /* UserProfileViewController.swift in Sources */,
 				24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */,
 				242AF9CA1FDC90750053AA26 /* OffersViewController.swift in Sources */,
 				24B9B1D81FD468E100CD0392 /* Result.swift in Sources */,
