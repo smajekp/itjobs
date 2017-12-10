@@ -1,5 +1,5 @@
 //
-//  OffersViewController.swift
+//  SearchOffersTableViewController.swift
 //  itjobs
 //
 //  Created by Piotrek on 09.12.2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OffersViewController: UITableViewController{
+class SearchOffersTableViewController: UITableViewController{
     
     let animals = ["Panda", "Lion", "Elefant"]
     
@@ -26,7 +26,7 @@ class OffersViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "offerCell", for: indexPath) as! OffersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchOfferCell", for: indexPath) as! OffersTableViewCell
         
         //cell.myImage.image = UIImage(named: (animals[indexPath.row] + ".jpg"))
         cell.offerTitle?.text = animals[indexPath.row]
@@ -36,19 +36,19 @@ class OffersViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 70
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var titleLabel: String = animals[indexPath.row]
-       performSegue(withIdentifier: "detailsSegue", sender: titleLabel)
+       performSegue(withIdentifier: "searchOfferDetailsSegue", sender: titleLabel)
     }
     
     //  Converted to Swift 4 with Swiftify v1.0.6536 - https://objectivec2swift.com/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailsSegue" {
-            if (segue.destination is OfferDetailsViewController) {
-                let detailsController = segue.destination as? OfferDetailsViewController
+        if segue.identifier == "searchOfferDetailsSegue" {
+            if (segue.destination is SearchOfferDetailsViewController) {
+                let detailsController = segue.destination as? SearchOfferDetailsViewController
                 if (sender is String) {
                     detailsController?.titleLabelText = sender as! String
                 }

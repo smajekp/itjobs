@@ -1,5 +1,5 @@
 //
-//  OfferDetailsViewController.swift
+//  SearchOfferDetailsViewController.swift
 //  itjobs
 //
 //  Created by Piotrek on 10.12.2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OfferDetailsViewController: UIViewController {
+class SearchOfferDetailsViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     

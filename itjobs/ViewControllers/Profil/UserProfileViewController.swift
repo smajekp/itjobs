@@ -28,7 +28,7 @@ class UserProfileViewController: UIViewController {
        // performSegue(withIdentifier: "logoutSegue", sender: self)
         
         let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        self.navigationController?.setViewControllers([userProfileViewController], animated: false)
+        self.navigationController?.setViewControllers([userProfileViewController], animated: true)
         
     }
     

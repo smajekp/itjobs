@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  itjobs
 //
 //  Created by Piotrek on 02.12.2017.
@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     var result = Result()

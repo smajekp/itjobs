@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         defaults.set(true, forKey: "logged")
         let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
-        self.navigationController?.setViewControllers([userProfileViewController], animated: false)
+        self.navigationController?.setViewControllers([userProfileViewController], animated: true)
     }
     
     func showUserProfileVC() {
@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
 
     //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = OffersViewController()
+//        let vc = SearchOffersTableViewController()
 //        segue.destination(vc)
 //    }
     
