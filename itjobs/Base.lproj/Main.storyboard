@@ -134,40 +134,148 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logowanie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFQ-3m-foL">
-                                <rect key="frame" x="102" y="75" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-Of-sX6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logowanie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4py-VH-lbV">
+                                <rect key="frame" x="146" y="84" width="83.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooo-4v-PMe">
-                                <rect key="frame" x="138" y="562" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Zarejestruj sie"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="soH-Lb-61I">
+                                <rect key="frame" x="135" y="119" width="105" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="IHh-dn-b7V"/>
+                                    <constraint firstAttribute="height" constant="85" id="eP1-Py-3ic"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ee9-uD-X8I">
+                                <rect key="frame" x="15" y="304" width="345" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-jm-jAT">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="27"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Ea-OF-9dc">
+                                                <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="0he-ED-RXG"/>
+                                                    <constraint firstAttribute="width" constant="27" id="kIe-R1-p55"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idO-4S-T0N">
+                                                <rect key="frame" x="37" y="0.0" width="308" height="27"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="wJR-0Z-vur"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="veJ-0E-nAh">
+                                        <rect key="frame" x="0.0" y="52" width="345" height="27"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password icon" translatesAutoresizingMaskIntoConstraints="NO" id="IqX-k7-ham">
+                                                <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="27" id="Iu0-hw-xJQ"/>
+                                                    <constraint firstAttribute="height" constant="27" id="uJr-H9-lew"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-f2-gJB">
+                                                <rect key="frame" x="37" y="0.0" width="308" height="27"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4P-E8-KFR">
+                                <rect key="frame" x="79" y="573.5" width="216" height="29.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Cj-zf-DmT">
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nie masz konta?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Fp-yLf">
+                                                <rect key="frame" x="0.0" y="6.5" width="112" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqD-5x-Cac">
+                                                <rect key="frame" x="122" y="0.0" width="94" height="30"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Zarejestruj się">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="FEd-IX-xmg" kind="show" id="ROI-5N-mlX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8Cj-zf-DmT" secondAttribute="bottom" id="C3P-Mi-5es"/>
+                                    <constraint firstItem="8Cj-zf-DmT" firstAttribute="leading" secondItem="T4P-E8-KFR" secondAttribute="leading" id="K2D-7t-AyE"/>
+                                    <constraint firstItem="8Cj-zf-DmT" firstAttribute="top" secondItem="T4P-E8-KFR" secondAttribute="top" id="UCv-AI-jLi"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Cj-zf-DmT" secondAttribute="trailing" id="goO-pu-hyF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn7-3d-qUh">
+                                <rect key="frame" x="25" y="523.5" width="325" height="40"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jZz-3l-Nip"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Zaloguj się">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="FEd-IX-xmg" kind="show" id="Wcu-F5-Fna"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-rP-rMT">
-                                <rect key="frame" x="138" y="498" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Zaloguj sie"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="c6A-lh-pZe" eventType="touchUpInside" id="QZH-Hw-8X5"/>
+                                    <action selector="loginAction:" destination="c6A-lh-pZe" eventType="touchUpInside" id="loY-0K-k67"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nn7-3d-qUh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ee9-uD-X8I" secondAttribute="bottom" constant="80" id="01N-oU-z90"/>
+                            <constraint firstItem="Ee9-uD-X8I" firstAttribute="leading" secondItem="Z0f-3m-hZT" secondAttribute="leading" constant="15" id="82L-BY-oB9"/>
+                            <constraint firstItem="soH-Lb-61I" firstAttribute="top" secondItem="4py-VH-lbV" secondAttribute="bottom" constant="15" id="A2E-nK-sS8"/>
+                            <constraint firstItem="T4P-E8-KFR" firstAttribute="centerX" secondItem="vnR-14-5GY" secondAttribute="centerX" id="AaP-Y7-qMj"/>
+                            <constraint firstItem="xl0-Of-sX6" firstAttribute="bottom" secondItem="Z0f-3m-hZT" secondAttribute="bottom" id="Jht-2R-xP0"/>
+                            <constraint firstItem="xl0-Of-sX6" firstAttribute="leading" secondItem="Z0f-3m-hZT" secondAttribute="leading" id="M5w-a2-Eef"/>
+                            <constraint firstItem="xl0-Of-sX6" firstAttribute="top" secondItem="Z0f-3m-hZT" secondAttribute="top" id="MZc-4M-jO7"/>
+                            <constraint firstItem="Z0f-3m-hZT" firstAttribute="trailing" secondItem="Nn7-3d-qUh" secondAttribute="trailing" constant="25" id="TBW-C6-fue"/>
+                            <constraint firstItem="T4P-E8-KFR" firstAttribute="top" secondItem="Nn7-3d-qUh" secondAttribute="bottom" constant="10" id="cWm-yg-WSD"/>
+                            <constraint firstItem="4py-VH-lbV" firstAttribute="top" secondItem="Z0f-3m-hZT" secondAttribute="top" constant="20" id="gaR-ss-6SR"/>
+                            <constraint firstItem="Ee9-uD-X8I" firstAttribute="top" secondItem="soH-Lb-61I" secondAttribute="bottom" constant="100" id="hxg-um-IN7"/>
+                            <constraint firstItem="xl0-Of-sX6" firstAttribute="trailing" secondItem="Z0f-3m-hZT" secondAttribute="trailing" id="lPY-2C-mdZ"/>
+                            <constraint firstItem="soH-Lb-61I" firstAttribute="centerX" secondItem="vnR-14-5GY" secondAttribute="centerX" id="lvE-IG-ax4"/>
+                            <constraint firstItem="Z0f-3m-hZT" firstAttribute="trailing" secondItem="Ee9-uD-X8I" secondAttribute="trailing" constant="15" id="rES-mC-gc1"/>
+                            <constraint firstItem="Nn7-3d-qUh" firstAttribute="leading" secondItem="Z0f-3m-hZT" secondAttribute="leading" constant="25" id="svp-C6-wC6"/>
+                            <constraint firstItem="Z0f-3m-hZT" firstAttribute="bottom" secondItem="T4P-E8-KFR" secondAttribute="bottom" constant="15" id="wvL-L5-ojy"/>
+                            <constraint firstItem="4py-VH-lbV" firstAttribute="centerX" secondItem="vnR-14-5GY" secondAttribute="centerX" id="xjc-cH-Pnv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Z0f-3m-hZT"/>
                     </view>
                     <navigationItem key="navigationItem" id="dlq-gx-qlC">
                         <barButtonItem key="backBarButtonItem" title="Powrót" id="8J8-4u-pNE"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loginTextField" destination="idO-4S-T0N" id="ATk-jC-3MD"/>
+                        <outlet property="passwordTextField" destination="PpW-f2-gJB" id="7FV-4V-9ei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TII-Vx-XyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="1090"/>
+            <point key="canvasLocation" x="640.79999999999995" y="1089.8050974512744"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6EN-Xy-QLS">
@@ -577,8 +685,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Password icon" width="27" height="27"/>
+        <image name="User icon" width="27" height="27"/>
         <image name="icon" width="25" height="25"/>
         <image name="list" width="25" height="25"/>
+        <image name="logo" width="100" height="90"/>
         <image name="rate-star-button" width="25" height="25"/>
         <image name="user" width="25" height="25"/>
     </resources>
