@@ -12,6 +12,7 @@ class UserProfileViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     var name: String = ""
+    var logoutReponse = LogoutResponse()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,29 +25,40 @@ class UserProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func logoutAction(_ sender: Any) {
-        defaults.set(false, forKey: "logged")
-       // performSegue(withIdentifier: "logoutSegue", sender: self)
-        
-        let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        self.navigationController?.setViewControllers([userProfileViewController], animated: false)
-        
+        let user_id = defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            logout(user_id: user_id)
+        }
     }
     
-//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "logoutSegue" {
-//            let destinationVC = segue.destination as? LoginViewController
-//        }
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func logout(user_id: String) {
+        let loginService = LoginService()
+        loginService.logout(user_id: user_id, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.logoutReponse = responseObject
+                    
+                    if (self.logoutReponse.status == "Logout success") {
+                        self.defaults.set(false, forKey: "logged")
+                        self.defaults.set("", forKey: "user_id")
+                        
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.successMessage(title: "Super!", body: "Wylogowano pomyślnie")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            swiftMessage.hideMessage()
+                            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                            self.navigationController?.setViewControllers([loginViewController], animated: false)
+                        })
+                        
+                        
+                    } else {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.errorMessage(title: "Błąd!", body: "Wystąpił nieoczekiwany błąd")
+                    }
+                }
+            }
+            return
+        })
     }
-    */
-
 }

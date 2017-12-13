@@ -7,16 +7,32 @@
 //
 
 import UIKit
+import PKHUD
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     let defaults = UserDefaults.standard
+    var loginResponse = LoginResponse()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        statusBar.backgroundColor = UIColor.clear
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
+        self.loginTextField.delegate = self
+        self.passwordTextField.delegate = self
         
         let isLogged = defaults.object(forKey: "logged") as? Bool
         if let isLogged = isLogged {
@@ -24,22 +40,59 @@ class LoginViewController: UIViewController {
                 showUserProfileVC()
             }
         }
-        //setPlaceholdersForTextFields()
+        setPlaceholdersColorsAndBorderBottom()
     }
     
-    func setPlaceholdersForTextFields() {
-        if let placeholderLogin = loginTextField.placeholder {
-            loginTextField.attributedPlaceholder = NSAttributedString(string:placeholderLogin,
-                                                                      attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        }
-        
-        if let placeholderLogin = passwordTextField.placeholder {
-            passwordTextField.attributedPlaceholder = NSAttributedString(string:placeholderLogin,
-                                                                      attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        }
-        
+    func setPlaceholdersColorsAndBorderBottom() {
+        loginTextField.placeholderColor(color: UIColor.white)
         loginTextField.setBottomBorder()
+        
+        passwordTextField.placeholderColor(color: UIColor.white)
         passwordTextField.setBottomBorder()
+    }
+    
+    func showUserProfileVC() {
+        let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+        self.navigationController?.setViewControllers([userProfileViewController], animated: false)
+    }
+    
+    func login(email: String, password: String) {
+        let loginService = LoginService()
+        loginService.login(email: email, password: password, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.loginResponse = responseObject
+                    
+                    if (self.loginResponse.status == "Email or password is incorrect") {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.errorMessage(title: "Błąd!", body: "Podane dane są nieprawidłowe")
+                    } else if (self.loginResponse.status == "true") {
+                        self.defaults.set(true, forKey: "logged")
+                        self.defaults.set(self.loginResponse.user_id!, forKey: "user_id")
+                        
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.successMessage(title: "Super!", body: "Zalogowano pomyślnie")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                            swiftMessage.hideMessage()
+                            let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+                            self.navigationController?.setViewControllers([userProfileViewController], animated: true)
+                        })
+                        
+                    } else {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.errorMessage(title: "Błąd!", body: "Wystąpił nieoczekiwany błąd")
+                    }
+                }
+            }
+            return
+        })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        login(email: loginTextField.text!, password: passwordTextField.text!)
+        textField.resignFirstResponder()
+        return false
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,36 +100,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showOffersVC(_ sender: Any) {
-         performSegue(withIdentifier: "mainToList", sender: self)
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "loginSegue" {
-            let destinationVC = segue.destination as? UserProfileViewController
-            destinationVC?.name = "Piotrek"
-             defaults.set(true, forKey: "logged")
-        }
-    }
-    
     @IBAction func loginAction(_ sender: Any) {
-        defaults.set(true, forKey: "logged")
-        let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
-        self.navigationController?.setViewControllers([userProfileViewController], animated: true)
+        login(email: loginTextField.text!, password: passwordTextField.text!)
     }
-    
-    func showUserProfileVC() {
-        let userProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
-        self.navigationController?.setViewControllers([userProfileViewController], animated: false)
-    }
-
-    //
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = SearchOffersTableViewController()
-//        segue.destination(vc)
-//    }
     
 }
-
-
-

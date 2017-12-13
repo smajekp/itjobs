@@ -9,5 +9,7 @@ target 'itjobs' do
   pod 'Alamofire', '~> 4.5.1'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper', '~> 3.1.0'
+  pod 'SwiftMessages', '~> 4.1.0'
+  pod 'PKHUD', '~> 5.0'
 
 end

@@ -21,7 +21,7 @@ class SearchOffersTableViewController: UITableViewController{
         super.viewDidLoad()
         
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        activityView.center = CGPoint(x: self.view.center.x,y: 100);
+        activityView.center = CGPoint(x: self.view.center.x,y: 150);
         activityView.startAnimating()
         self.view.addSubview(activityView)
         
@@ -70,7 +70,7 @@ class SearchOffersTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var offer: Offer = resultOffers[indexPath.row]
+       let offer: Offer = resultOffers[indexPath.row]
        performSegue(withIdentifier: "searchOfferDetailsSegue", sender: offer)
     }
     

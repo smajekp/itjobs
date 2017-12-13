@@ -40,6 +40,11 @@
 		24847EF91FD2EB490002B1F5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF81FD2EB490002B1F5 /* SearchViewController.swift */; };
 		24847EFE1FD2EB490002B1F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFD1FD2EB490002B1F5 /* Assets.xcassets */; };
 		24847F011FD2EB490002B1F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFF1FD2EB490002B1F5 /* LaunchScreen.storyboard */; };
+		2495B6301FE183650042D25B /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495B62F1FE183650042D25B /* LoginService.swift */; };
+		2495B6321FE183A90042D25B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495B6311FE183A90042D25B /* LoginResponse.swift */; };
+		2495B6341FE18D790042D25B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495B6331FE18D790042D25B /* RegistrationViewController.swift */; };
+		2495B6371FE1A1080042D25B /* SwiftMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495B6361FE1A1080042D25B /* SwiftMessage.swift */; };
+		2495B63B1FE1AB250042D25B /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495B63A1FE1AB250042D25B /* LogoutResponse.swift */; };
 		24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1CF1FD468B000CD0392 /* Bonuses.swift */; };
 		24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D11FD468BB00CD0392 /* Equipment.swift */; };
 		24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B1D31FD468CD00CD0392 /* OfferResponse.swift */; };
@@ -49,6 +54,11 @@
 		24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D894461FDD93BA00A5E09C /* FavouritesTableViewController.swift */; };
 		24D8944B1FDD95E100A5E09C /* OffersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8944A1FDD95E100A5E09C /* OffersTableViewController.swift */; };
 		24D8944D1FDD95FA00A5E09C /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8944C1FDD95FA00A5E09C /* OfferDetailsViewController.swift */; };
+		24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD21FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift */; };
+		24DFACD51FE1D26200B21D4F /* UITextField+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD41FE1D26200B21D4F /* UITextField+PlaceholderColor.swift */; };
+		24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */; };
+		24DFACD91FE1D94100B21D4F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD81FE1D94100B21D4F /* Company.swift */; };
+		24DFACDB1FE1DAD600B21D4F /* CompaniesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */; };
 		326D61E1992C39FF9F4D61BC /* Pods_itjobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +99,11 @@
 		24847EFD1FD2EB490002B1F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24847F001FD2EB490002B1F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24847F021FD2EB490002B1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2495B62F1FE183650042D25B /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		2495B6311FE183A90042D25B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2495B6331FE18D790042D25B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		2495B6361FE1A1080042D25B /* SwiftMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessage.swift; sourceTree = "<group>"; };
+		2495B63A1FE1AB250042D25B /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 		24B9B1CF1FD468B000CD0392 /* Bonuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bonuses.swift; sourceTree = "<group>"; };
 		24B9B1D11FD468BB00CD0392 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		24B9B1D31FD468CD00CD0392 /* OfferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferResponse.swift; sourceTree = "<group>"; };
@@ -98,6 +113,11 @@
 		24D894461FDD93BA00A5E09C /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		24D8944A1FDD95E100A5E09C /* OffersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersTableViewController.swift; sourceTree = "<group>"; };
 		24D8944C1FDD95FA00A5E09C /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
+		24DFACD21FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		24DFACD41FE1D26200B21D4F /* UITextField+PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PlaceholderColor.swift"; sourceTree = "<group>"; };
+		24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesService.swift; sourceTree = "<group>"; };
+		24DFACD81FE1D94100B21D4F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesResponse.swift; sourceTree = "<group>"; };
 		787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itjobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD29C277B0E8E1A88286E3 /* Pods-itjobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +174,8 @@
 			children = (
 				242AF9BC1FDC8C8E0053AA26 /* UIColor+HexColor.swift */,
 				242AF9BE1FDC8CB00053AA26 /* UITextField+BottomBorder.swift */,
+				24DFACD21FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift */,
+				24DFACD41FE1D26200B21D4F /* UITextField+PlaceholderColor.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -181,6 +203,7 @@
 			children = (
 				242AF9921FDC7C140053AA26 /* LoginViewController.swift */,
 				2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */,
+				2495B6331FE18D790042D25B /* RegistrationViewController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -190,6 +213,9 @@
 			children = (
 				24B9B1D31FD468CD00CD0392 /* OfferResponse.swift */,
 				2451B00A1FDDB38000E9BB1C /* OffersResponse.swift */,
+				2495B6311FE183A90042D25B /* LoginResponse.swift */,
+				2495B63A1FE1AB250042D25B /* LogoutResponse.swift */,
+				24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -203,6 +229,7 @@
 				24B9B1D51FD468DB00CD0392 /* Methodology.swift */,
 				24B9B1D71FD468E100CD0392 /* Offer.swift */,
 				24B9B1D91FD468E900CD0392 /* Specifics.swift */,
+				24DFACD81FE1D94100B21D4F /* Company.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +255,7 @@
 		24847EF51FD2EB490002B1F5 /* itjobs */ = {
 			isa = PBXGroup;
 			children = (
+				2495B6351FE1A0B40042D25B /* CustomViews */,
 				242AF9D01FDC90B50053AA26 /* CustomCells */,
 				242AF9BB1FDC8C300053AA26 /* Categories */,
 				242AF9971FDC7CFF0053AA26 /* Resources */,
@@ -244,10 +272,20 @@
 			path = itjobs;
 			sourceTree = "<group>";
 		};
+		2495B6351FE1A0B40042D25B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2495B6361FE1A1080042D25B /* SwiftMessage.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		24B5ED741FD32ACF002C9C86 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				243DA4111FD42BFF00D073C2 /* OffersService.swift */,
+				2495B62F1FE183650042D25B /* LoginService.swift */,
+				24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -403,12 +441,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -437,7 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DFACDB1FE1DAD600B21D4F /* CompaniesResponse.swift in Sources */,
+				2495B63B1FE1AB250042D25B /* LogoutResponse.swift in Sources */,
 				24847EF91FD2EB490002B1F5 /* SearchViewController.swift in Sources */,
+				2495B6371FE1A1080042D25B /* SwiftMessage.swift in Sources */,
 				242AF9BD1FDC8C8E0053AA26 /* UIColor+HexColor.swift in Sources */,
 				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
 				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
@@ -450,15 +495,22 @@
 				2451B0051FDD9CBE00E9BB1C /* FavouriteOfferDetailsViewController.swift in Sources */,
 				243A52AF1FD47F340063CD54 /* Constants.swift in Sources */,
 				242AF9BF1FDC8CB00053AA26 /* UITextField+BottomBorder.swift in Sources */,
+				2495B6301FE183650042D25B /* LoginService.swift in Sources */,
+				2495B6341FE18D790042D25B /* RegistrationViewController.swift in Sources */,
+				2495B6321FE183A90042D25B /* LoginResponse.swift in Sources */,
 				2451B00B1FDDB38000E9BB1C /* OffersResponse.swift in Sources */,
 				243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */,
+				24DFACD51FE1D26200B21D4F /* UITextField+PlaceholderColor.swift in Sources */,
+				24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */,
 				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */,
 				24D8944D1FDD95FA00A5E09C /* OfferDetailsViewController.swift in Sources */,
 				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
+				24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */,
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,
+				24DFACD91FE1D94100B21D4F /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

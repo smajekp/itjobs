@@ -40,7 +40,7 @@ class FavouritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var titleLabel: String = animals[indexPath.row]
+        let titleLabel: String = animals[indexPath.row]
         performSegue(withIdentifier: "favouriteOfferDetailsSegue", sender: titleLabel)
     }
     

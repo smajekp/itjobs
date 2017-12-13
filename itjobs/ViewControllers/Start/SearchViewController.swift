@@ -16,12 +16,14 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     var result = Offer()
     var resultOffers = [Offer]()
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-                
+        self.defaults.set(false, forKey: "logged")
+        self.defaults.set("", forKey: "user_id")
+     
         getOffer(offerNumber: 171)
         getOffers(pageNumber: 1)
     }
