@@ -41,19 +41,19 @@ class LoginService {
         }
     }
     
-    func logout(user_id: String, completionHandler: @escaping (LogoutResponse?, NSError?) -> ()){
+    func logout(user_id: String, completionHandler: @escaping (StatusResponse?, NSError?) -> ()){
         logoutRequest(user_id: user_id, completionHandler: completionHandler)
     }
     
-    func logoutRequest(user_id: String, completionHandler: @escaping (LogoutResponse?, NSError?) -> ()){
+    func logoutRequest(user_id: String, completionHandler: @escaping (StatusResponse?, NSError?) -> ()){
         let path: String = "logout?user_id=" + String(user_id)
         let url = Constants.baseURL + path
         
-        Alamofire.request(url,  method: HTTPMethod.delete, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<LogoutResponse>) in
+        Alamofire.request(url,  method: HTTPMethod.delete, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<StatusResponse>) in
             switch response.result {
             case .success:
                 if let baseResponse = response.result.value {
-                    let logoutResponse = LogoutResponse()
+                    let logoutResponse = StatusResponse()
                     if baseResponse.status != nil {
                         logoutResponse.status = baseResponse.status
                     }

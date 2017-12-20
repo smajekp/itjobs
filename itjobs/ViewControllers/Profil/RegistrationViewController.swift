@@ -22,7 +22,11 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
     let userTypePicker = UIPickerView()
     
     var resultCompanies = [Company]()
+    var statusResponse = StatusResponse()
     let companiesPicker = UIPickerView()
+    
+    var userTypeString: String = ""
+    var idCompanyString: String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -39,6 +43,7 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.companyStackView.isHidden = true
         
         getCompanies()
         
@@ -75,10 +80,10 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
         var cancelButton = UIBarButtonItem()
         if (tag == 1) {
             doneButton = UIBarButtonItem(title: "Wybierz", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneUserPicker))
-            cancelButton = UIBarButtonItem(title: "Anuluj", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneUserPicker))
+            cancelButton = UIBarButtonItem(title: "Anuluj", style: UIBarButtonItemStyle.plain, target: self, action: #selector(cancelPicker))
         } else {
             doneButton = UIBarButtonItem(title: "Wybierz", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneCompanyPicker))
-            cancelButton = UIBarButtonItem(title: "Anuluj", style: UIBarButtonItemStyle.plain, target: self, action: #selector(doneCompanyPicker))
+            cancelButton = UIBarButtonItem(title: "Anuluj", style: UIBarButtonItemStyle.plain, target: self, action: #selector(cancelPicker))
         }
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
@@ -91,6 +96,7 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
     @objc func doneUserPicker() {
         let row : Int = userTypePicker.selectedRow(inComponent: 0)
         self.userType.text = userTypeArray[row]
+        self.userTypeString = userTypeArray[row]
         self.companyStackView.isHidden = row == 0
         
         self.view.endEditing(false)
@@ -99,7 +105,12 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
     @objc func doneCompanyPicker() {
         let row : Int = companiesPicker.selectedRow(inComponent: 0)
         self.companyName.text = resultCompanies[row].name
+        self.idCompanyString = resultCompanies[row].id!
         
+        self.view.endEditing(false)
+    }
+    
+    @objc func cancelPicker() {
         self.view.endEditing(false)
     }
     
@@ -156,7 +167,85 @@ class RegistrationViewController: UIViewController, UIPickerViewDelegate, UIPick
         textField.resignFirstResponder()
         return false
     }
-
+    
+    @IBAction func registerButtonClicked(_ sender: Any) {
+        if (emailTextField.text!.count > 0) {
+            if (isValidEmail(testStr: emailTextField.text!)) {
+                if (nameTextField.text!.count > 0) {
+                    if (passwordTextField.text!.count > 0 || retypePasswordTextField.text!.count > 0) {
+                        if (passwordTextField.text! == retypePasswordTextField.text!) {
+                            if (userTypeString.count > 0) {
+                                
+                                if(userTypeString == "Pracownik HR" || userTypeString == "employees") {
+                                    if(idCompanyString.count > 0) {
+                                        userTypeString = "employees"
+                                        createUser(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, type : userTypeString, id_company: idCompanyString)
+                                    } else {
+                                        let swiftMessage = SwiftMessage()
+                                        swiftMessage.errorMessage(title: "Błąd!", body: "Wybierz firmę")
+                                    }
+                                } else {
+                                    userTypeString = "user"
+                                    createUser(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, type : userTypeString, id_company: idCompanyString)
+                                }
+                            } else {
+                                let swiftMessage = SwiftMessage()
+                                swiftMessage.errorMessage(title: "Błąd!", body: "Wybierz typ użytkownika")
+                            }
+                        } else {
+                            let swiftMessage = SwiftMessage()
+                            swiftMessage.errorMessage(title: "Błąd!", body: "Hasła się różnią")
+                        }
+                    } else {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.errorMessage(title: "Błąd!", body: "Podaj hasło")
+                    }
+                } else {
+                    let swiftMessage = SwiftMessage()
+                    swiftMessage.errorMessage(title: "Błąd!", body: "Podaj imię i nazwisko")
+                }
+            } else {
+                let swiftMessage = SwiftMessage()
+                swiftMessage.errorMessage(title: "Błąd!", body: "Podaj poprawny email")
+            }
+        } else {
+            let swiftMessage = SwiftMessage()
+            swiftMessage.errorMessage(title: "Błąd!", body: "Podaj email")
+        }
+    }
+    
+    func createUser(name: String, email: String, password: String, type : String, id_company: String) {
+        let registerService = RegisterService()
+        registerService.registerUser(name: name, email: email, password: password, type: type, id_company: id_company,
+                                     completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.statusResponse = responseObject
+                    if (self.statusResponse.status == "User Created") {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.successMessage(title: "Rejestracja OK!", body: "Od teraz możesz się logować!")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            swiftMessage.hideMessage()
+                            self.navigationController?.popViewController(animated: true)
+                        })
+                    } else {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.errorMessage(title: "Błąd!", body: "Użytkownik istnieje")
+                    }
+                }
+            }
+            return
+        })
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

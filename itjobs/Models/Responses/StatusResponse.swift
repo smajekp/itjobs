@@ -1,5 +1,5 @@
 //
-//  LogoutResponse.swift
+//  StatusResponse.swift
 //  itjobs
 //
 //  Created by Piotrek on 13.12.2017.
@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class LogoutResponse:Mappable {
+class StatusResponse:Mappable {
     var status : String?
     
     init() {

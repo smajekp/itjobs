@@ -12,7 +12,7 @@ class UserProfileViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     var name: String = ""
-    var logoutReponse = LogoutResponse()
+    var logoutReponse = StatusResponse()
 
     override func viewDidLoad() {
         super.viewDidLoad()
