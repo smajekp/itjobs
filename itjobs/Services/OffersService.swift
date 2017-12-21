@@ -57,5 +57,31 @@ class OffersService {
             
         }
     }
+    
+    func findOffers(title: String, lowerSalary: String, upperSalary: String, haveSalary: String, language: String, city: String, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
+        findOffersRequest(title: title, lowerSalary: lowerSalary, upperSalary: upperSalary, haveSalary: haveSalary, language: language, city: city, completionHandler: completionHandler)
+    }
+    
+    func findOffersRequest(title: String, lowerSalary: String, upperSalary: String, haveSalary: String, language: String, city: String, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
+        
+        let path: String = "offer?title=" + String(title) + "&lower_salary=" + String(lowerSalary) + "&upper_salary=" + String(upperSalary) + "&have_salary=" + String(haveSalary) + "&language=" + String(language) + "&city=" + String(city)
+        
+        let url = Constants.baseURL + path
+        
+        Alamofire.request(url,  method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<OffersResponse>) in
+            switch response.result {
+            case .success:
+                if let baseResponse = response.result.value {
+                    if baseResponse.result != nil {
+                        let resultResponse: [Offer] = baseResponse.result!
+                        completionHandler(resultResponse, nil)
+                    }
+                }
+            case .failure(let error):
+                completionHandler(nil, error as NSError)
+            }
+            
+        }
+    }
 
 }

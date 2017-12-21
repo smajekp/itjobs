@@ -30,6 +30,12 @@ class Offer: Mappable {
     var equipment : [Equipment]?
     var bonuses : [Bonuses]?
     var id_from_www : Int?
+    var name : String?
+    var logo : String?
+    var website : String?
+    var address : String?
+    var employees : String?
+    var capital : String?
     
     init() {
     }
@@ -59,6 +65,12 @@ class Offer: Mappable {
         equipment <- map["equipment"]
         bonuses <- map["bonuses"]
         id_from_www <- map["id_from_www"]
+        name <- map["name"]
+        logo <- map["logo"]
+        website <- map["website"]
+        address <- map["address"]
+        employees <- map["employees"]
+        capital <- map["capital"]
     }
     
 }

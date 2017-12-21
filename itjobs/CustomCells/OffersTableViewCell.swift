@@ -12,6 +12,8 @@ class OffersTableViewCell: UITableViewCell {
  
     
     @IBOutlet weak var offerTitle: UILabel!
+    @IBOutlet weak var offerImage: UIImageView!
+    @IBOutlet weak var offerSubtitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

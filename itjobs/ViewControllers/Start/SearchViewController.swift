@@ -14,18 +14,32 @@ import ObjectMapper
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var phraseTextField: UITextField!
+    
     var result = Offer()
     var resultOffers = [Offer]()
     let defaults = UserDefaults.standard
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        statusBar.backgroundColor = UIColor.clear
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        phraseTextField.placeholderColor(color: UIColor.white)
+        phraseTextField.setBottomBorder()
         
         self.defaults.set(false, forKey: "logged")
         self.defaults.set("", forKey: "user_id")
      
         getOffer(offerNumber: 171)
-        getOffers(pageNumber: 1)
     }
     
     func getOffer(offerNumber: Int) {
@@ -43,31 +57,22 @@ class SearchViewController: UIViewController {
         })
     }
     
-    func getOffers(pageNumber: Int) {
-        let offersService = OffersService()
-        offersService.getOffers(pageNumber: pageNumber, completionHandler: { responseObject, error in
-            if error == nil {
-                //print(responseObject!)
-                if let responseObject = responseObject {
-                    self.resultOffers = responseObject
-                    
-//                    self.indicator.stopAnimating()
-//                    self.indicator.hidesWhenStopped = true
-                    //self.setupView(resource: responseObject)
-                    //self.showLoginVC()
-                }
-            }
-            return
-        })
-    }
-    
     func setupView(resource: Offer) {
         self.label.text = resource.city
     }
     
-    func showLoginVC() {
-        let vc = LoginViewController() //change this to your class name
-        self.present(vc, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "searchSegue" {
+            if (segue.destination is SearchOffersTableViewController) {
+                let tableViewController = segue.destination as? SearchOffersTableViewController
+                    tableViewController?.titleValue = phraseTextField.text
+                    tableViewController?.lowerSalaryValue = "0"
+                    tableViewController?.upperSalaryValue = "10000"
+                    tableViewController?.haveSalaryValue = "1"
+                    tableViewController?.languageValue = ""
+                    tableViewController?.cityValue = ""
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

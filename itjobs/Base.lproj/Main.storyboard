@@ -504,23 +504,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="hE8-pv-utt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wyszukiwarka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-IU-xr6">
+                                <rect key="frame" x="131" y="79" width="113.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0l-bg-XtE">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <rect key="frame" x="317" y="111" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-pJ-MSN">
-                                <rect key="frame" x="166" y="447" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C6M-Mn-Vyc">
+                                <rect key="frame" x="25" y="229" width="325" height="27"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Szukana fraza" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7B-Fa-Hc9">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="27"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="s8w-7x-Hqz"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-pJ-MSN">
+                                <rect key="frame" x="25" y="553" width="325" height="40"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cUB-tj-5tx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Szukaj">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="hrr-RD-eIX" kind="show" id="oby-r0-7Wb"/>
+                                    <segue destination="hrr-RD-eIX" kind="show" identifier="searchSegue" id="oby-r0-7Wb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="VWh-zy-7Ya">
+                                <rect key="frame" x="135" y="114" width="105" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="IcQ-5c-bNJ"/>
+                                    <constraint firstAttribute="width" constant="105" id="smn-r6-9jh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hE8-pv-utt" firstAttribute="top" secondItem="hsn-SI-CPQ" secondAttribute="top" id="6yX-Z6-kYu"/>
+                            <constraint firstItem="E9Z-pJ-MSN" firstAttribute="leading" secondItem="LVO-3k-2bx" secondAttribute="leading" constant="25" id="ClG-G0-aGr"/>
+                            <constraint firstItem="E9Z-pJ-MSN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="C6M-Mn-Vyc" secondAttribute="bottom" constant="50" id="D1r-RD-5q6"/>
+                            <constraint firstItem="LVO-3k-2bx" firstAttribute="bottom" secondItem="E9Z-pJ-MSN" secondAttribute="bottom" constant="25" id="FjT-i9-Xox"/>
+                            <constraint firstItem="VWh-zy-7Ya" firstAttribute="centerX" secondItem="hsn-SI-CPQ" secondAttribute="centerX" id="KQi-HW-x1K"/>
+                            <constraint firstItem="C6M-Mn-Vyc" firstAttribute="leading" secondItem="LVO-3k-2bx" secondAttribute="leading" constant="25" id="MVv-Up-gHC"/>
+                            <constraint firstItem="hE8-pv-utt" firstAttribute="bottom" secondItem="LVO-3k-2bx" secondAttribute="bottom" id="P9l-zS-jaR"/>
+                            <constraint firstItem="C6M-Mn-Vyc" firstAttribute="top" secondItem="VWh-zy-7Ya" secondAttribute="bottom" constant="30" id="RUa-tS-Bce"/>
+                            <constraint firstItem="LVO-3k-2bx" firstAttribute="trailing" secondItem="C6M-Mn-Vyc" secondAttribute="trailing" constant="25" id="TNA-mc-kTs"/>
+                            <constraint firstItem="LVO-3k-2bx" firstAttribute="trailing" secondItem="E9Z-pJ-MSN" secondAttribute="trailing" constant="25" id="TmZ-yt-9qt"/>
+                            <constraint firstItem="lgS-IU-xr6" firstAttribute="top" secondItem="LVO-3k-2bx" secondAttribute="top" constant="15" id="TsU-d8-lhI"/>
+                            <constraint firstItem="lgS-IU-xr6" firstAttribute="centerX" secondItem="hsn-SI-CPQ" secondAttribute="centerX" id="WTB-Ge-6Ga"/>
+                            <constraint firstItem="hE8-pv-utt" firstAttribute="leading" secondItem="LVO-3k-2bx" secondAttribute="leading" id="jHF-Vo-7XC"/>
+                            <constraint firstItem="VWh-zy-7Ya" firstAttribute="top" secondItem="lgS-IU-xr6" secondAttribute="bottom" constant="15" id="s06-Ap-q6o"/>
+                            <constraint firstItem="hE8-pv-utt" firstAttribute="trailing" secondItem="LVO-3k-2bx" secondAttribute="trailing" id="x6e-NV-Vak"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LVO-3k-2bx"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mhy-hV-WFL">
@@ -528,11 +583,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="label" destination="T0l-bg-XtE" id="LWi-uD-psO"/>
+                        <outlet property="phraseTextField" destination="M7B-Fa-Hc9" id="h5G-l9-ViT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBY-fm-pm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="-1146"/>
+            <point key="canvasLocation" x="604" y="-1146.4767616191905"/>
         </scene>
         <!--Search Offers Table View Controller-->
         <scene sceneID="Vu9-1P-kyD">
@@ -594,6 +650,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="offerImage" destination="Xlv-7d-8Wv" id="2wq-50-IS4"/>
+                                    <outlet property="offerSubtitle" destination="hey-SN-Uar" id="aP6-ws-0BQ"/>
                                     <outlet property="offerTitle" destination="ZaR-0k-KHt" id="Ioh-VH-CFi"/>
                                 </connections>
                             </tableViewCell>

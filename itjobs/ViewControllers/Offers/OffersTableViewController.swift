@@ -12,6 +12,7 @@ class OffersTableViewController: UITableViewController {
 
     let animals = ["Panda", "Lion", "Elefant"]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,7 +45,6 @@ class OffersTableViewController: UITableViewController {
         performSegue(withIdentifier: "offerDetailsSegue", sender: titleLabel)
     }
     
-    //  Converted to Swift 4 with Swiftify v1.0.6536 - https://objectivec2swift.com/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "offerDetailsSegue" {
             if (segue.destination is OfferDetailsViewController) {
