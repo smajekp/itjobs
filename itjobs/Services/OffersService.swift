@@ -64,7 +64,27 @@ class OffersService {
     
     func findOffersRequest(title: String, lowerSalary: String, upperSalary: String, haveSalary: String, language: String, city: String, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
         
-        let path: String = "offer?title=" + String(title) + "&lower_salary=" + String(lowerSalary) + "&upper_salary=" + String(upperSalary) + "&have_salary=" + String(haveSalary) + "&language=" + String(language) + "&city=" + String(city)
+        var languageString = ""
+        if (language != "engpl") {
+            languageString = "&language=" + String(language)
+        }
+        
+        var cityString = city
+        if (language == "eng") {
+            if (city == "Warszawa") {
+                cityString = "Warsaw"
+            }
+        }
+        if (city == "Wszystkie") {
+            cityString = ""
+        }
+        
+        var salary = ""
+        if (haveSalary == "1") {
+            salary = "&lower_salary=" + String(lowerSalary) + "&upper_salary=" + String(upperSalary)
+        }
+        
+        let path: String = "offer?title=" + String(title) + salary + "&have_salary=" + String(haveSalary) + languageString + "&city=" + String(cityString)
         
         let url = Constants.baseURL + path
         

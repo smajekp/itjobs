@@ -36,10 +36,12 @@ class SearchOffersTableViewController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.view.backgroundColor = .clear
         
-        activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        activityView.center = CGPoint(x: self.view.center.x,y: 150);
-        activityView.startAnimating()
-        self.view.addSubview(activityView)
+        if (!(self.resultOffers.count > 0)) {
+            activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            activityView.center = CGPoint(x: self.view.center.x,y: 150);
+            activityView.startAnimating()
+            self.view.addSubview(activityView)
+        }
         
         getOffers(title: titleValue!, lowerSalary: lowerSalaryValue!, upperSalary: upperSalaryValue!, haveSalary: haveSalaryValue!, language: languageValue!, city: cityValue!)
     }

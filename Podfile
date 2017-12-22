@@ -11,6 +11,8 @@ target 'itjobs' do
   pod 'ObjectMapper', '~> 3.1.0'
   pod 'SwiftMessages', '~> 4.1.0'
   pod 'PKHUD', '~> 5.0'
-  pod 'Kingfisher', '~> '4.4.0'
+  pod 'Kingfisher', '~> 4.4.0'
+  pod 'RangeSeekSlider', '~> 1.7.0'
+  pod 'M13Checkbox', '~> 3.2.1'
 
 end
