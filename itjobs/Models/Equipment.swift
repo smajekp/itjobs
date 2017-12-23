@@ -10,6 +10,7 @@ import ObjectMapper
 class Equipment:Mappable {
     var name : String?
     var isAvailable : Bool?
+    var system : String?
     
     required init?(map: Map){
         
@@ -18,6 +19,7 @@ class Equipment:Mappable {
     func mapping(map: Map) {
         name <- map["name"]
         isAvailable <- map["isAvailable"]
+        system <- map["system"]
     }
     
     

@@ -70,7 +70,6 @@ class Offer: Mappable {
         website <- map["website"]
         address <- map["address"]
         employees <- map["employees"]
-        capital <- map["capital"]
     }
     
 }
