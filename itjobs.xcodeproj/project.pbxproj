@@ -34,7 +34,6 @@
 		243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DA4111FD42BFF00D073C2 /* OffersService.swift */; };
 		2440046C1FDD82F30032EB7E /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */; };
 		2451B0031FDD9C8600E9BB1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24847EFA1FD2EB490002B1F5 /* Main.storyboard */; };
-		2451B0051FDD9CBE00E9BB1C /* FavouriteOfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451B0041FDD9CBD00E9BB1C /* FavouriteOfferDetailsViewController.swift */; };
 		2451B00B1FDDB38000E9BB1C /* OffersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2451B00A1FDDB38000E9BB1C /* OffersResponse.swift */; };
 		246AB52A1FEEA3CE00AB3B68 /* String+html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246AB5291FEEA3CE00AB3B68 /* String+html.swift */; };
 		24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24847EF61FD2EB490002B1F5 /* AppDelegate.swift */; };
@@ -55,7 +54,6 @@
 		24C931AE1FEB09660005C7AC /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C931AD1FEB09660005C7AC /* RegisterService.swift */; };
 		24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D894461FDD93BA00A5E09C /* FavouritesTableViewController.swift */; };
 		24D8944B1FDD95E100A5E09C /* OffersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8944A1FDD95E100A5E09C /* OffersTableViewController.swift */; };
-		24D8944D1FDD95FA00A5E09C /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D8944C1FDD95FA00A5E09C /* OfferDetailsViewController.swift */; };
 		24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD21FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift */; };
 		24DFACD51FE1D26200B21D4F /* UITextField+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD41FE1D26200B21D4F /* UITextField+PlaceholderColor.swift */; };
 		24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */; };
@@ -92,7 +90,6 @@
 		243A52AE1FD47F340063CD54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		243DA4111FD42BFF00D073C2 /* OffersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersService.swift; sourceTree = "<group>"; };
 		2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		2451B0041FDD9CBD00E9BB1C /* FavouriteOfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteOfferDetailsViewController.swift; sourceTree = "<group>"; };
 		2451B00A1FDDB38000E9BB1C /* OffersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersResponse.swift; sourceTree = "<group>"; };
 		246AB5291FEEA3CE00AB3B68 /* String+html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+html.swift"; sourceTree = "<group>"; };
 		24847EF31FD2EB490002B1F5 /* itjobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itjobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +113,6 @@
 		24C931AD1FEB09660005C7AC /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		24D894461FDD93BA00A5E09C /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		24D8944A1FDD95E100A5E09C /* OffersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersTableViewController.swift; sourceTree = "<group>"; };
-		24D8944C1FDD95FA00A5E09C /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		24DFACD21FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		24DFACD41FE1D26200B21D4F /* UITextField+PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PlaceholderColor.swift"; sourceTree = "<group>"; };
 		24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesService.swift; sourceTree = "<group>"; };
@@ -299,7 +295,6 @@
 		24D894441FDD91CF00A5E09C /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
-				2451B0041FDD9CBD00E9BB1C /* FavouriteOfferDetailsViewController.swift */,
 				24D894461FDD93BA00A5E09C /* FavouritesTableViewController.swift */,
 			);
 			path = Favourites;
@@ -309,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				24D8944A1FDD95E100A5E09C /* OffersTableViewController.swift */,
-				24D8944C1FDD95FA00A5E09C /* OfferDetailsViewController.swift */,
 			);
 			path = Offers;
 			sourceTree = "<group>";
@@ -504,7 +498,6 @@
 				24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */,
 				242AF9CA1FDC90750053AA26 /* SearchOffersTableViewController.swift in Sources */,
 				24B9B1D81FD468E100CD0392 /* Offer.swift in Sources */,
-				2451B0051FDD9CBE00E9BB1C /* FavouriteOfferDetailsViewController.swift in Sources */,
 				243A52AF1FD47F340063CD54 /* Constants.swift in Sources */,
 				242AF9BF1FDC8CB00053AA26 /* UITextField+BottomBorder.swift in Sources */,
 				2495B6301FE183650042D25B /* LoginService.swift in Sources */,
@@ -519,7 +512,6 @@
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */,
-				24D8944D1FDD95FA00A5E09C /* OfferDetailsViewController.swift in Sources */,
 				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
 				24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */,
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,

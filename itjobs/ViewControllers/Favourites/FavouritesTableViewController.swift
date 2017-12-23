@@ -41,19 +41,24 @@ class FavouritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let titleLabel: String = animals[indexPath.row]
-        performSegue(withIdentifier: "favouriteOfferDetailsSegue", sender: titleLabel)
+        //performSegue(withIdentifier: "favouriteOfferDetailsSegue", sender: titleLabel)
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchOfferDetailsViewController") as! SearchOfferDetailsViewController
+        var offer: Offer = Offer()
+        offer.id = 185
+        secondViewController.offer = offer
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
     //  Converted to Swift 4 with Swiftify v1.0.6536 - https://objectivec2swift.com/
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "favouriteOfferDetailsSegue" {
-            if (segue.destination is FavouriteOfferDetailsViewController) {
-                let detailsController = segue.destination as? FavouriteOfferDetailsViewController
-                if (sender is String) {
-                    detailsController?.titleLabelText = sender as! String
-                }
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "favouriteOfferDetailsSegue" {
+//            if (segue.destination is FavouriteOfferDetailsViewController) {
+//                let detailsController = segue.destination as? FavouriteOfferDetailsViewController
+//                if (sender is String) {
+//                    detailsController?.titleLabelText = sender as! String
+//                }
+//            }
+//        }
+//    }
 
 }

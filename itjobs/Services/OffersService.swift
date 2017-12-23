@@ -39,7 +39,7 @@ class OffersService {
     }
     
     func getOffersRequest(pageNumber: Int, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
-        let path: String = "offers?page=" + String(pageNumber) + "&limit=10"
+        let path: String = "offers?page=" + String(pageNumber) + "&limit=200"
         let url = Constants.baseURL + path
         
         Alamofire.request(url,  method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<OffersResponse>) in

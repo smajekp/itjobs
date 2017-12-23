@@ -107,19 +107,24 @@ class SearchOffersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        let offer: Offer = resultOffers[indexPath.row]
-       performSegue(withIdentifier: "searchOfferDetailsSegue", sender: offer)
+       //performSegue(withIdentifier: "searchOfferDetailsSegue", sender: offer)
+        
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchOfferDetailsViewController") as! SearchOfferDetailsViewController
+        secondViewController.offer = offer
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "searchOfferDetailsSegue" {
-            if (segue.destination is SearchOfferDetailsViewController) {
-                let detailsController = segue.destination as? SearchOfferDetailsViewController
-                if (sender is Offer) {
-                    detailsController?.offer = sender as! Offer
-                }
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "searchOfferDetailsSegue" {
+//            if (segue.destination is SearchOfferDetailsViewController) {
+//                let detailsController = segue.destination as? SearchOfferDetailsViewController
+//                if (sender is Offer) {
+//                    detailsController?.offer = sender as! Offer
+//                }
+//            }
+//        }
+//    }
 
 
 }
