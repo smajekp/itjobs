@@ -44,6 +44,7 @@ class SearchOfferDetailsViewController: UIViewController {
     @IBOutlet weak var addToFavouritesButton: UIButton!
     @IBOutlet weak var offerView: UIView!
     @IBOutlet weak var addToFavourites: UIButton!
+    @IBOutlet weak var deleteFromFavourites: UIButton!
     
     var offer: Offer!
     var offerResponse: Offer!
@@ -70,8 +71,10 @@ class SearchOfferDetailsViewController: UIViewController {
         if let isLogged = isLogged {
             if (!isLogged) {
                 self.addToFavourites.isHidden = true
+                self.deleteFromFavourites.isHidden = true
             } else {
                 self.addToFavourites.isHidden = false
+                self.deleteFromFavourites.isHidden = false
             }
         }
         
@@ -98,11 +101,15 @@ class SearchOfferDetailsViewController: UIViewController {
         let user_id = defaults.object(forKey: "user_id") as? String
         if let user_id = user_id {
             if let offerId = offer.id {
-                if (self.isAdded) {
-                    deleteOfferFromFavourites(userId: user_id, offerId: String(offerId))
-                } else {
-                    addOfferToFavourites(userId: user_id, offerId: String(offerId))
-                }
+                addOfferToFavourites(userId: user_id, offerId: String(offerId))
+            }
+        }
+    }
+    @IBAction func deleteFromFavouritesAction(_ sender: Any) {
+        let user_id = defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            if let offerId = offer.id {
+                deleteOfferFromFavourites(userId: user_id, offerId: String(offerId))
             }
         }
     }
@@ -114,11 +121,18 @@ class SearchOfferDetailsViewController: UIViewController {
                 if let responseObject = responseObject {
                     self.statusResponse = responseObject
                     if (self.statusResponse.status == "Favourite found") {
-                        self.addToFavourites.titleLabel?.text = "Usuń z ulubionych -"
+                        self.addToFavourites.isHidden = true
+                        self.deleteFromFavourites.isHidden = false
                         self.isAdded = true
                     } else {
                         self.isAdded = false
+                        self.addToFavourites.isHidden = false
+                        self.deleteFromFavourites.isHidden = true
                     }
+                    
+                    self.offerView.isHidden = false
+                    self.activityView.removeFromSuperview()
+                    
                 }
             }
             return
@@ -133,7 +147,8 @@ class SearchOfferDetailsViewController: UIViewController {
                 self.statusResponse = responseObject
                 if (self.statusResponse.status == "Favourite added") {
                     self.isAdded = true
-                    self.addToFavourites.titleLabel?.text = "Usuń z ulubionych -"
+                    self.addToFavourites.isHidden = true
+                    self.deleteFromFavourites.isHidden = false
                     
                     let swiftMessage = SwiftMessage()
                     swiftMessage.successMessage(title: "OK!", body: "Dodano do ulubionych!")
@@ -162,7 +177,8 @@ class SearchOfferDetailsViewController: UIViewController {
                             swiftMessage.hideMessage()
                         })
                         
-                        self.addToFavourites.titleLabel?.text = "Dodaj do ulubionych +"
+                        self.addToFavourites.isHidden = false
+                        self.deleteFromFavourites.isHidden = true
                         self.isAdded = false
                     }
                 }
@@ -366,8 +382,6 @@ class SearchOfferDetailsViewController: UIViewController {
                         }
                     }
                     
-                    self.offerView.isHidden = false
-                    self.activityView.removeFromSuperview()
 
                 }
             }

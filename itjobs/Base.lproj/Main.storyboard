@@ -919,7 +919,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="719"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-od-cTa">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="769"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="819"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFX-oi-LHu">
                                                 <rect key="frame" x="15" y="10" width="100" height="50"/>
@@ -929,7 +929,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wIl-Ib-SVG">
-                                                <rect key="frame" x="15" y="65" width="375" height="684"/>
+                                                <rect key="frame" x="15" y="65" width="375" height="734"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-8D-H51">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -1212,6 +1212,21 @@
                                                             <action selector="addToFavourites:" destination="0VV-Ro-tyO" eventType="touchUpInside" id="kMG-Ak-IyQ"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DT-f1-tof">
+                                                        <rect key="frame" x="0.0" y="694" width="375" height="40"/>
+                                                        <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="R9F-jj-7uI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Usuń z ulubionych -">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="deleteFromFavouritesAction:" destination="0VV-Ro-tyO" eventType="touchUpInside" id="Urj-6Z-5b5"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1254,6 +1269,7 @@
                         <outlet property="companyNameStackView" destination="Ksq-qc-wMA" id="avE-QV-snU"/>
                         <outlet property="dataLabel" destination="7yG-1z-mYI" id="BFI-Vm-bqg"/>
                         <outlet property="dataStackView" destination="leU-BL-xfv" id="I2k-Rn-PpL"/>
+                        <outlet property="deleteFromFavourites" destination="5DT-f1-tof" id="Wam-kc-U7H"/>
                         <outlet property="employeesNumber" destination="CGC-n6-G0C" id="J9M-JU-taf"/>
                         <outlet property="equipmentElements" destination="D5x-Y2-jc1" id="oga-ac-dgF"/>
                         <outlet property="languagesElements" destination="ZZv-4P-5E8" id="X7P-mC-0is"/>
