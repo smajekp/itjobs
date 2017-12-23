@@ -28,13 +28,13 @@ class SearchOffersTableViewController: UITableViewController {
         super.viewWillAppear(false)
         
         self.title = "Wyniki"
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Raleway-Regular", size: 15.0)!], for: .normal)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.navigationBar.tintColor = UIColor.black;
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         
         if (!(self.resultOffers.count > 0)) {
             activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
@@ -48,6 +48,7 @@ class SearchOffersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
     }
     
     func getOffers(title: String, lowerSalary: String, upperSalary: String, haveSalary: String, language: String, city: String) {
