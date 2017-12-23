@@ -33,7 +33,11 @@ class FavouritesTableViewController: UITableViewController {
             self.view.addSubview(activityView)
         }
         
-        getFavouritesOffers(userId: 1)
+        let user_id = defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            getFavouritesOffers(userId: Int(user_id)!)
+        }
+
     }
     
     override func viewDidLoad() {
@@ -42,8 +46,8 @@ class FavouritesTableViewController: UITableViewController {
     }
     
     func getFavouritesOffers(userId: Int) {
-        let offersService = OffersService()
-        offersService.getFavouritesOffers(userId: userId, completionHandler: { responseObject, error in
+        let favouritesService = FavouritesService()
+        favouritesService.getFavouritesOffers(userId: userId, completionHandler: { responseObject, error in
             if error == nil {
                 if let responseObject = responseObject {
                     self.resultOffers = responseObject

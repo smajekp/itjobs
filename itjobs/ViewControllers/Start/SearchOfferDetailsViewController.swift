@@ -41,12 +41,19 @@ class SearchOfferDetailsViewController: UIViewController {
     @IBOutlet weak var equipmentStackView: UIStackView!
     @IBOutlet weak var bonusesElements: UILabel!
     @IBOutlet weak var bonusesStackView: UIStackView!
+    @IBOutlet weak var addToFavouritesButton: UIButton!
     @IBOutlet weak var offerView: UIView!
+    @IBOutlet weak var addToFavourites: UIButton!
+    
     var offer: Offer!
     var offerResponse: Offer!
+    var statusResponse = StatusResponse()
+    var isAdded: Bool = false
     
     var activityView = UIActivityIndicatorView()
     var customView = UIView()
+    
+    let defaults = UserDefaults.standard
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -58,17 +65,110 @@ class SearchOfferDetailsViewController: UIViewController {
         activityView.center = CGPoint(x: self.view.center.x,y: 150);
         activityView.startAnimating()
         self.view.addSubview(activityView)
+
+        let isLogged = defaults.object(forKey: "logged") as? Bool
+        if let isLogged = isLogged {
+            if (!isLogged) {
+                self.addToFavourites.isHidden = true
+            } else {
+                self.addToFavourites.isHidden = false
+            }
+        }
         
         if let offerId = offer.id {
             getOffer(offerNumber: offerId)
         }
         
+        let user_id = defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            if let offerId = offer.id {
+                isFavouritesAdded(userId: user_id, offerId: String(offerId))
+            }
+        }
+ 
     }
     
     var strings:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+ 
+    @IBAction func addToFavourites(_ sender: Any) {
+        let user_id = defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            if let offerId = offer.id {
+                if (self.isAdded) {
+                    deleteOfferFromFavourites(userId: user_id, offerId: String(offerId))
+                } else {
+                    addOfferToFavourites(userId: user_id, offerId: String(offerId))
+                }
+            }
+        }
+    }
+    
+    func isFavouritesAdded(userId: String, offerId: String) {
+        let favouritesService = FavouritesService()
+        favouritesService.isFavouritesAdded(userId: Int(userId)!, offerId: Int(offerId)!, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.statusResponse = responseObject
+                    if (self.statusResponse.status == "Favourite found") {
+                        self.addToFavourites.titleLabel?.text = "Usuń z ulubionych -"
+                        self.isAdded = true
+                    } else {
+                        self.isAdded = false
+                    }
+                }
+            }
+            return
+        })
+    }
+    
+    func addOfferToFavourites(userId: String, offerId: String) {
+        let favouritesService = FavouritesService()
+        favouritesService.addToFavourites(userId: userId, offerId: offerId, completionHandler: { responseObject, error in
+        if error == nil {
+            if let responseObject = responseObject {
+                self.statusResponse = responseObject
+                if (self.statusResponse.status == "Favourite added") {
+                    self.isAdded = true
+                    self.addToFavourites.titleLabel?.text = "Usuń z ulubionych -"
+                    
+                    let swiftMessage = SwiftMessage()
+                    swiftMessage.successMessage(title: "OK!", body: "Dodano do ulubionych!")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        swiftMessage.hideMessage()
+                    })
+                }
+            }
+        }
+        return
+        })
+    }
+    
+    func deleteOfferFromFavourites(userId: String, offerId: String) {
+        let favouritesService = FavouritesService()
+        favouritesService.deleteFromFavourites(userId: userId, offerId: offerId, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.statusResponse = responseObject
+                    if (self.statusResponse.status == "Favourite deleted") {
+                        let swiftMessage = SwiftMessage()
+                        swiftMessage.successMessage(title: "OK!", body: "Usunięto z ulubionych!")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            swiftMessage.hideMessage()
+                        })
+                        
+                        self.addToFavourites.titleLabel?.text = "Dodaj do ulubionych +"
+                        self.isAdded = false
+                    }
+                }
+            }
+            return
+        })
     }
     
     func getOffer(offerNumber: Int) {
@@ -268,12 +368,7 @@ class SearchOfferDetailsViewController: UIViewController {
                     
                     self.offerView.isHidden = false
                     self.activityView.removeFromSuperview()
-                    
-//                    self.activityView.removeFromSuperview()
-//
-//                    self.tableView.reloadData()
-                    //self.setupView(resource: responseObject)
-                    //self.showLoginVC()
+
                 }
             }
             return
@@ -283,16 +378,6 @@ class SearchOfferDetailsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-   
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

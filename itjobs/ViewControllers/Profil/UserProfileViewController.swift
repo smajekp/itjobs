@@ -14,6 +14,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var userView: UIView!
     
     var userResponse: User!
     
@@ -26,7 +27,7 @@ class UserProfileViewController: UIViewController {
         super.viewWillAppear(false)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        self.stackView.isHidden = true
+        self.userView.isHidden = true
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .white)
         activityView.center = CGPoint(x: self.view.center.x,y: 150);
         activityView.startAnimating()
@@ -99,7 +100,7 @@ class UserProfileViewController: UIViewController {
                     self.email.text = self.userResponse.email
                     self.date.text = self.userResponse.create_date
                     
-                    self.stackView.isHidden = false
+                    self.userView.isHidden = false
                     self.activityView.removeFromSuperview()
                 }
             }

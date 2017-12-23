@@ -103,29 +103,5 @@ class OffersService {
             
         }
     }
-    
-    func getFavouritesOffers(userId: Int, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
-        getFavouritesOffersRequest(userId: userId, completionHandler: completionHandler)
-    }
-    
-    func getFavouritesOffersRequest(userId: Int, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
-        let path: String = "favourite/" + String(userId)
-        let url = Constants.baseURL + path
-        
-        Alamofire.request(url,  method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<OffersResponse>) in
-            switch response.result {
-            case .success:
-                if let baseResponse = response.result.value {
-                    if baseResponse.result != nil {
-                        let resultResponse: [Offer] = baseResponse.result!
-                        completionHandler(resultResponse, nil)
-                    }
-                }
-            case .failure(let error):
-                completionHandler(nil, error as NSError)
-            }
-            
-        }
-    }
 
 }

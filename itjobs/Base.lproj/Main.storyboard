@@ -454,109 +454,120 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-7F-g4C">
-                                <rect key="frame" x="15" y="80" width="345" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pe-lH-Zba">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2VA-nq-Eon">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-7F-g4C">
+                                        <rect key="frame" x="15" y="20" width="345" height="140"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zalogowany jako:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-sj-T0H">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię i nazwisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI9-hU-Eep">
-                                                <rect key="frame" x="0.0" y="20" width="345" height="20"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2VA-nq-Eon">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zalogowany jako:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7R-sj-T0H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię i nazwisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI9-hU-Eep">
+                                                        <rect key="frame" x="0.0" y="20" width="345" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fP4-K3-laK">
+                                                <rect key="frame" x="0.0" y="50" width="345" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-Qz-y1i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGR-QL-Ae3">
+                                                        <rect key="frame" x="0.0" y="20" width="345" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="d3I-ED-9AO">
+                                                <rect key="frame" x="0.0" y="100" width="345" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data utworzenia konta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAt-9x-0QY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xQ-te-1hC">
+                                                        <rect key="frame" x="0.0" y="20" width="345" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fP4-K3-laK">
-                                        <rect key="frame" x="0.0" y="50" width="345" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-Qz-y1i">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGR-QL-Ae3">
-                                                <rect key="frame" x="0.0" y="20" width="345" height="20"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="d3I-ED-9AO">
-                                        <rect key="frame" x="0.0" y="100" width="345" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data utworzenia konta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAt-9x-0QY">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="18"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xQ-te-1hC">
-                                                <rect key="frame" x="0.0" y="20" width="345" height="20"/>
-                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcO-dn-pMv">
+                                        <rect key="frame" x="25" y="547" width="325" height="40"/>
+                                        <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IF1-ui-GNH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="Wyloguj się">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutAction:" destination="qha-6u-JLQ" eventType="touchUpInside" id="Gih-Kj-QFS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD6-Wh-NHT">
+                                        <rect key="frame" x="25" y="487" width="325" height="40"/>
+                                        <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="cNQ-a7-joJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                        <state key="normal" title="Pokaż ulubione oferty">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showFavourites:" destination="qha-6u-JLQ" eventType="touchUpInside" id="zxz-B0-8RP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcO-dn-pMv">
-                                <rect key="frame" x="25" y="602" width="325" height="40"/>
-                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="IF1-ui-GNH"/>
+                                    <constraint firstItem="DcO-dn-pMv" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="25" id="CaZ-c7-F4q"/>
+                                    <constraint firstItem="Dkm-7F-g4C" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="15" id="NWY-4S-Fpa"/>
+                                    <constraint firstItem="DcO-dn-pMv" firstAttribute="top" secondItem="iD6-Wh-NHT" secondAttribute="bottom" constant="20" id="VeN-UG-bap"/>
+                                    <constraint firstItem="iD6-Wh-NHT" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="25" id="Wyr-fj-l14"/>
+                                    <constraint firstAttribute="trailing" secondItem="iD6-Wh-NHT" secondAttribute="trailing" constant="25" id="YNV-Ww-acJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dkm-7F-g4C" secondAttribute="trailing" constant="15" id="bkR-MR-p6d"/>
+                                    <constraint firstItem="Dkm-7F-g4C" firstAttribute="top" secondItem="3pe-lH-Zba" secondAttribute="top" constant="20" id="cZm-cy-FM4"/>
+                                    <constraint firstAttribute="bottom" secondItem="DcO-dn-pMv" secondAttribute="bottom" constant="20" id="hgt-Wm-jKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="DcO-dn-pMv" secondAttribute="trailing" constant="25" id="rVB-Fd-ApA"/>
+                                    <constraint firstItem="iD6-Wh-NHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Dkm-7F-g4C" secondAttribute="bottom" constant="200" id="sjh-wZ-c2k"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                <state key="normal" title="Wyloguj się">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutAction:" destination="qha-6u-JLQ" eventType="touchUpInside" id="Gih-Kj-QFS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD6-Wh-NHT">
-                                <rect key="frame" x="25" y="542" width="325" height="40"/>
-                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cNQ-a7-joJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                <state key="normal" title="Pokaż ulubione oferty">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showFavourites:" destination="qha-6u-JLQ" eventType="touchUpInside" id="zxz-B0-8RP"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iD6-Wh-NHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Dkm-7F-g4C" secondAttribute="bottom" constant="200" id="06F-vt-wbi"/>
+                            <constraint firstItem="3pe-lH-Zba" firstAttribute="leading" secondItem="Z7Y-uy-wuX" secondAttribute="leading" id="4zD-mD-8ar"/>
+                            <constraint firstItem="o0I-I0-cOr" firstAttribute="bottom" secondItem="3pe-lH-Zba" secondAttribute="bottom" id="6Qm-jS-x4o"/>
+                            <constraint firstItem="3pe-lH-Zba" firstAttribute="top" secondItem="nJq-Za-R5e" secondAttribute="bottom" constant="5" id="7YD-Is-Q5f"/>
                             <constraint firstItem="oco-BH-zMQ" firstAttribute="top" secondItem="Z7Y-uy-wuX" secondAttribute="top" id="8HF-6M-leZ"/>
-                            <constraint firstItem="o0I-I0-cOr" firstAttribute="bottom" secondItem="DcO-dn-pMv" secondAttribute="bottom" constant="25" id="8mi-el-Vaq"/>
-                            <constraint firstItem="iD6-Wh-NHT" firstAttribute="leading" secondItem="o0I-I0-cOr" secondAttribute="leading" constant="25" id="Dh5-Qu-hMe"/>
                             <constraint firstItem="oco-BH-zMQ" firstAttribute="leading" secondItem="o0I-I0-cOr" secondAttribute="leading" id="EDg-d4-kam"/>
-                            <constraint firstItem="o0I-I0-cOr" firstAttribute="trailing" secondItem="DcO-dn-pMv" secondAttribute="trailing" constant="25" id="IWH-ln-Pbj"/>
-                            <constraint firstItem="DcO-dn-pMv" firstAttribute="top" secondItem="iD6-Wh-NHT" secondAttribute="bottom" constant="20" id="Np9-Oz-IhP"/>
                             <constraint firstItem="nJq-Za-R5e" firstAttribute="top" secondItem="o0I-I0-cOr" secondAttribute="top" constant="15" id="O8D-d2-gyn"/>
-                            <constraint firstItem="Dkm-7F-g4C" firstAttribute="top" secondItem="nJq-Za-R5e" secondAttribute="bottom" constant="25" id="OF9-DW-mEv"/>
-                            <constraint firstItem="Dkm-7F-g4C" firstAttribute="leading" secondItem="o0I-I0-cOr" secondAttribute="leading" constant="15" id="PEp-bG-ylw"/>
-                            <constraint firstItem="o0I-I0-cOr" firstAttribute="trailing" secondItem="iD6-Wh-NHT" secondAttribute="trailing" constant="25" id="StB-M6-4Q3"/>
                             <constraint firstItem="oco-BH-zMQ" firstAttribute="trailing" secondItem="o0I-I0-cOr" secondAttribute="trailing" id="X9p-HU-euv"/>
-                            <constraint firstItem="o0I-I0-cOr" firstAttribute="trailing" secondItem="Dkm-7F-g4C" secondAttribute="trailing" constant="15" id="Z64-bp-omW"/>
-                            <constraint firstItem="DcO-dn-pMv" firstAttribute="leading" secondItem="o0I-I0-cOr" secondAttribute="leading" constant="25" id="ZeZ-MW-Xfr"/>
                             <constraint firstItem="oco-BH-zMQ" firstAttribute="bottom" secondItem="o0I-I0-cOr" secondAttribute="bottom" id="hWL-g2-Je6"/>
                             <constraint firstItem="o0I-I0-cOr" firstAttribute="trailing" secondItem="nJq-Za-R5e" secondAttribute="trailing" constant="25" id="pAK-Ha-G7W"/>
+                            <constraint firstAttribute="trailing" secondItem="3pe-lH-Zba" secondAttribute="trailing" id="rtf-td-tLA"/>
                             <constraint firstItem="nJq-Za-R5e" firstAttribute="leading" secondItem="o0I-I0-cOr" secondAttribute="leading" constant="25" id="uMG-WC-WIU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o0I-I0-cOr"/>
@@ -566,6 +577,7 @@
                         <outlet property="email" destination="QGR-QL-Ae3" id="VJx-dk-N5B"/>
                         <outlet property="name" destination="yI9-hU-Eep" id="BU5-Kw-yH6"/>
                         <outlet property="stackView" destination="Dkm-7F-g4C" id="c9O-Vj-qBM"/>
+                        <outlet property="userView" destination="3pe-lH-Zba" id="Bka-Rj-9uU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ib-q7-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -907,7 +919,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="719"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-od-cTa">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="719"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="769"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fFX-oi-LHu">
                                                 <rect key="frame" x="15" y="10" width="100" height="50"/>
@@ -917,7 +929,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wIl-Ib-SVG">
-                                                <rect key="frame" x="15" y="65" width="375" height="634"/>
+                                                <rect key="frame" x="15" y="65" width="375" height="684"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-8D-H51">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -1185,6 +1197,21 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-C5-Vqm">
+                                                        <rect key="frame" x="0.0" y="644" width="375" height="40"/>
+                                                        <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="vPR-7o-Vcj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Dodaj do ulubionych +">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="addToFavourites:" destination="0VV-Ro-tyO" eventType="touchUpInside" id="kMG-Ak-IyQ"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1218,6 +1245,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="832"/>
                     <connections>
+                        <outlet property="addToFavourites" destination="vGX-C5-Vqm" id="NTo-ZF-sGc"/>
                         <outlet property="bonusesElements" destination="uUm-Zs-dtO" id="2Ae-TK-ODu"/>
                         <outlet property="cityLabel" destination="nE0-fQ-XZK" id="MZ6-lh-enQ"/>
                         <outlet property="cityStackView" destination="ukW-Je-4cE" id="NPM-u0-yNG"/>
