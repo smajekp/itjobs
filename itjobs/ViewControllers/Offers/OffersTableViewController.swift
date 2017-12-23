@@ -44,14 +44,11 @@ class OffersTableViewController: UITableViewController {
         let offersService = OffersService()
         offersService.getOffers(pageNumber: pageNumber, completionHandler: { responseObject, error in
             if error == nil {
-                //print(responseObject!)
                 if let responseObject = responseObject {
                     self.resultOffers = responseObject
                     self.activityView.removeFromSuperview()
                     
                     self.tableView.reloadData()
-                    //self.setupView(resource: responseObject)
-                    //self.showLoginVC()
                 }
             }
             return
@@ -96,24 +93,11 @@ class OffersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let offer: Offer = resultOffers[indexPath.row]
-        //performSegue(withIdentifier: "searchOfferDetailsSegue", sender: offer)
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchOfferDetailsViewController") as! SearchOfferDetailsViewController
         secondViewController.offer = offer
         self.navigationController?.pushViewController(secondViewController, animated: true)
         
     }
-
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "offerDetailsSegue" {
-//            if (segue.destination is OfferDetailsViewController) {
-//                let detailsController = segue.destination as? OfferDetailsViewController
-//                if (sender is String) {
-//                    detailsController?.titleLabelText = sender as! String
-//                }
-//            }
-//        }
-//    }
 
 }

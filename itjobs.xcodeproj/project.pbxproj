@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241F3B4F1FEEF1FC00D07308 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */; };
+		241F3B511FEEF20600D07308 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B501FEEF20600D07308 /* User.swift */; };
+		241F3B531FEEF25500D07308 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B521FEEF25500D07308 /* UserService.swift */; };
 		242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9921FDC7C140053AA26 /* LoginViewController.swift */; };
 		242AF9AA1FDC7D2B0053AA26 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */; };
 		242AF9AB1FDC7D2B0053AA26 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */; };
@@ -64,6 +67,9 @@
 
 /* Begin PBXFileReference section */
 		0247FD9054627C6DDE2538EE /* Pods-itjobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.release.xcconfig"; sourceTree = "<group>"; };
+		241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		241F3B501FEEF20600D07308 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		241F3B521FEEF25500D07308 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		242AF9921FDC7C140053AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				2495B6311FE183A90042D25B /* LoginResponse.swift */,
 				2495B63A1FE1AB250042D25B /* StatusResponse.swift */,
 				24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */,
+				241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 				24B9B1D71FD468E100CD0392 /* Offer.swift */,
 				24B9B1D91FD468E900CD0392 /* Specifics.swift */,
 				24DFACD81FE1D94100B21D4F /* Company.swift */,
+				241F3B501FEEF20600D07308 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				2495B62F1FE183650042D25B /* LoginService.swift */,
 				24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */,
 				24C931AD1FEB09660005C7AC /* RegisterService.swift */,
+				241F3B521FEEF25500D07308 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -506,9 +515,11 @@
 				2495B6321FE183A90042D25B /* LoginResponse.swift in Sources */,
 				2451B00B1FDDB38000E9BB1C /* OffersResponse.swift in Sources */,
 				243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */,
+				241F3B531FEEF25500D07308 /* UserService.swift in Sources */,
 				24DFACD51FE1D26200B21D4F /* UITextField+PlaceholderColor.swift in Sources */,
 				24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */,
 				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
+				241F3B511FEEF20600D07308 /* User.swift in Sources */,
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */,
@@ -517,6 +528,7 @@
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,
 				24DFACD91FE1D94100B21D4F /* Company.swift in Sources */,
 				246AB52A1FEEA3CE00AB3B68 /* String+html.swift in Sources */,
+				241F3B4F1FEEF1FC00D07308 /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

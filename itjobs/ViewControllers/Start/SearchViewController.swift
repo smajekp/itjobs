@@ -58,10 +58,7 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         cityTextField.setBottomBorder()
         
         setupRangeSlider()
-        
-        self.defaults.set(false, forKey: "logged")
-        self.defaults.set("", forKey: "user_id")
-        
+
         createCityPicker()
      
        // getOffer(offerNumber: 171)

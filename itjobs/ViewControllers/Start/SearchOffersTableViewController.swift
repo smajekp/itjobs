@@ -64,6 +64,13 @@ class SearchOffersTableViewController: UITableViewController {
                     //self.setupView(resource: responseObject)
                     //self.showLoginVC()
                 }
+            } else {
+                self.resultOffers = []
+                self.activityView.removeFromSuperview()
+                self.tableView.reloadData()
+                
+                let swiftMessage = SwiftMessage()
+                swiftMessage.errorMessage(title: "Niestety!", body: "Brak wyników wyszukiwania")
             }
             return
         })
