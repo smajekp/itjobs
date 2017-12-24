@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24142EC51FF057AB00C577F5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24142EC41FF057AB00C577F5 /* TestViewController.swift */; };
+		24142EC71FF057B800C577F5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24142EC61FF057B800C577F5 /* ResultViewController.swift */; };
 		241F3B4F1FEEF1FC00D07308 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */; };
 		241F3B511FEEF20600D07308 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B501FEEF20600D07308 /* User.swift */; };
 		241F3B531FEEF25500D07308 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B521FEEF25500D07308 /* UserService.swift */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		0247FD9054627C6DDE2538EE /* Pods-itjobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.release.xcconfig"; sourceTree = "<group>"; };
+		24142EC41FF057AB00C577F5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		24142EC61FF057B800C577F5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		241F3B501FEEF20600D07308 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		241F3B521FEEF25500D07308 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -146,9 +150,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24142EBF1FF0555400C577F5 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				24142EC41FF057AB00C577F5 /* TestViewController.swift */,
+				24142EC61FF057B800C577F5 /* ResultViewController.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		242AF9911FDC6AB50053AA26 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				24142EBF1FF0555400C577F5 /* Test */,
 				24D894451FDD91DB00A5E09C /* Offers */,
 				24D894441FDD91CF00A5E09C /* Favourites */,
 				244004681FDD807A0032EB7E /* Profil */,
@@ -536,9 +550,11 @@
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */,
+				24142EC51FF057AB00C577F5 /* TestViewController.swift in Sources */,
 				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
 				24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */,
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,
+				24142EC71FF057B800C577F5 /* ResultViewController.swift in Sources */,
 				24DFACD91FE1D94100B21D4F /* Company.swift in Sources */,
 				246AB52A1FEEA3CE00AB3B68 /* String+html.swift in Sources */,
 				241F3B591FEF324900D07308 /* CV.swift in Sources */,
