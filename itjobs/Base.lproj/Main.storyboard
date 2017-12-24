@@ -541,18 +541,70 @@
                                             <action selector="showFavourites:" destination="qha-6u-JLQ" eventType="touchUpInside" id="zxz-B0-8RP"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-hU-cw1">
+                                        <rect key="frame" x="15" y="227" width="345" height="20"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KIp-eu-x7m">
+                                        <rect key="frame" x="15" y="257" width="100" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Wzp-X8-E44"/>
+                                            <constraint firstAttribute="height" constant="120" id="kwb-Q4-BaG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QaQ-5T-kgH">
+                                        <rect key="frame" x="15" y="392" width="260" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksw-pE-UBF">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                                <state key="normal" title="Dodaj CV">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadImageButtonTapped:" destination="qha-6u-JLQ" eventType="touchUpInside" id="ZNe-LR-izQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-4O-0T0">
+                                                <rect key="frame" x="0.0" y="30" width="260" height="30"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                                <state key="normal" title="Usuń CV">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteCVTapped:" destination="qha-6u-JLQ" eventType="touchUpInside" id="6DL-pv-uXk"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Przesyłanie CV..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv4-iY-bXO">
+                                                <rect key="frame" x="0.0" y="60" width="260" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="QaQ-5T-kgH" firstAttribute="top" secondItem="KIp-eu-x7m" secondAttribute="bottom" constant="15" id="Bn7-sW-5d1"/>
                                     <constraint firstItem="DcO-dn-pMv" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="25" id="CaZ-c7-F4q"/>
+                                    <constraint firstItem="z9z-hU-cw1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Dkm-7F-g4C" secondAttribute="bottom" id="IUq-Ra-X1c"/>
+                                    <constraint firstItem="KIp-eu-x7m" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="15" id="Lsf-J6-PLI"/>
                                     <constraint firstItem="Dkm-7F-g4C" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="15" id="NWY-4S-Fpa"/>
                                     <constraint firstItem="DcO-dn-pMv" firstAttribute="top" secondItem="iD6-Wh-NHT" secondAttribute="bottom" constant="20" id="VeN-UG-bap"/>
                                     <constraint firstItem="iD6-Wh-NHT" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="25" id="Wyr-fj-l14"/>
                                     <constraint firstAttribute="trailing" secondItem="iD6-Wh-NHT" secondAttribute="trailing" constant="25" id="YNV-Ww-acJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Dkm-7F-g4C" secondAttribute="trailing" constant="15" id="bkR-MR-p6d"/>
                                     <constraint firstItem="Dkm-7F-g4C" firstAttribute="top" secondItem="3pe-lH-Zba" secondAttribute="top" constant="20" id="cZm-cy-FM4"/>
+                                    <constraint firstItem="KIp-eu-x7m" firstAttribute="top" secondItem="z9z-hU-cw1" secondAttribute="bottom" constant="10" id="fsp-De-m6K"/>
                                     <constraint firstAttribute="bottom" secondItem="DcO-dn-pMv" secondAttribute="bottom" constant="20" id="hgt-Wm-jKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="QaQ-5T-kgH" secondAttribute="trailing" constant="100" id="lt0-nt-FcS"/>
+                                    <constraint firstItem="QaQ-5T-kgH" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="15" id="nd5-0I-ePT"/>
+                                    <constraint firstItem="iD6-Wh-NHT" firstAttribute="top" secondItem="QaQ-5T-kgH" secondAttribute="bottom" constant="15" id="o3c-FI-8Lk"/>
                                     <constraint firstAttribute="trailing" secondItem="DcO-dn-pMv" secondAttribute="trailing" constant="25" id="rVB-Fd-ApA"/>
-                                    <constraint firstItem="iD6-Wh-NHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Dkm-7F-g4C" secondAttribute="bottom" constant="200" id="sjh-wZ-c2k"/>
+                                    <constraint firstAttribute="trailing" secondItem="z9z-hU-cw1" secondAttribute="trailing" constant="15" id="x8o-T7-7vy"/>
+                                    <constraint firstItem="z9z-hU-cw1" firstAttribute="leading" secondItem="3pe-lH-Zba" secondAttribute="leading" constant="15" id="yZU-p7-m0y"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -573,8 +625,12 @@
                         <viewLayoutGuide key="safeArea" id="o0I-I0-cOr"/>
                     </view>
                     <connections>
+                        <outlet property="addCVButton" destination="Ksw-pE-UBF" id="wb9-Si-1t9"/>
                         <outlet property="date" destination="6xQ-te-1hC" id="wPJ-L4-IJF"/>
+                        <outlet property="deleteCVButton" destination="ucz-4O-0T0" id="eBL-3b-tKp"/>
                         <outlet property="email" destination="QGR-QL-Ae3" id="VJx-dk-N5B"/>
+                        <outlet property="image" destination="KIp-eu-x7m" id="VlK-wY-Cs1"/>
+                        <outlet property="loadingPhotoLabel" destination="Kv4-iY-bXO" id="r1B-bg-DPH"/>
                         <outlet property="name" destination="yI9-hU-Eep" id="BU5-Kw-yH6"/>
                         <outlet property="stackView" destination="Dkm-7F-g4C" id="c9O-Vj-qBM"/>
                         <outlet property="userView" destination="3pe-lH-Zba" id="Bka-Rj-9uU"/>
@@ -596,7 +652,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wyszukiwarka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-IU-xr6">
-                                <rect key="frame" x="131.5" y="79" width="113.5" height="20"/>
+                                <rect key="frame" x="131" y="79" width="113.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

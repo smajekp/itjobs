@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let baseURL = "http://vps447923.ovh.net/inz_api/"
+    static let baseURLImage = "http://vps447923.ovh.net/images/uploads/"
 }

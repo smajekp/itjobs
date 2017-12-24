@@ -14,5 +14,6 @@ target 'itjobs' do
   pod 'Kingfisher', '~> 4.4.0'
   pod 'RangeSeekSlider', '~> 1.7.0'
   pod 'M13Checkbox', '~> 3.2.1'
+  pod 'SKPhotoBrowser', '~> 5.0.0'
 
 end

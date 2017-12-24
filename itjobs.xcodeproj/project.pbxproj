@@ -11,6 +11,8 @@
 		241F3B511FEEF20600D07308 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B501FEEF20600D07308 /* User.swift */; };
 		241F3B531FEEF25500D07308 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B521FEEF25500D07308 /* UserService.swift */; };
 		241F3B551FEF07E700D07308 /* FavouritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B541FEF07E700D07308 /* FavouritesService.swift */; };
+		241F3B571FEF324000D07308 /* CVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B561FEF324000D07308 /* CVResponse.swift */; };
+		241F3B591FEF324900D07308 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F3B581FEF324900D07308 /* CV.swift */; };
 		242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AF9921FDC7C140053AA26 /* LoginViewController.swift */; };
 		242AF9AA1FDC7D2B0053AA26 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */; };
 		242AF9AB1FDC7D2B0053AA26 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */; };
@@ -72,6 +74,8 @@
 		241F3B501FEEF20600D07308 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		241F3B521FEEF25500D07308 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		241F3B541FEF07E700D07308 /* FavouritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesService.swift; sourceTree = "<group>"; };
+		241F3B561FEF324000D07308 /* CVResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVResponse.swift; sourceTree = "<group>"; };
+		241F3B581FEF324900D07308 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		242AF9921FDC7C140053AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		242AF9991FDC7D2A0053AA26 /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		242AF99A1FDC7D2A0053AA26 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-BoldItalic.ttf"; path = "../../../../../../Downloads/Raleway/Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 				2495B63A1FE1AB250042D25B /* StatusResponse.swift */,
 				24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */,
 				241F3B4E1FEEF1FC00D07308 /* UserResponse.swift */,
+				241F3B561FEF324000D07308 /* CVResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				2451B00E1FDDB3A100E9BB1C /* Responses */,
 				24B9B1CF1FD468B000CD0392 /* Bonuses.swift */,
 				24B9B1D11FD468BB00CD0392 /* Equipment.swift */,
+				241F3B581FEF324900D07308 /* CV.swift */,
 				24B9B1D51FD468DB00CD0392 /* Methodology.swift */,
 				24B9B1D71FD468E100CD0392 /* Offer.swift */,
 				24B9B1D91FD468E900CD0392 /* Specifics.swift */,
@@ -457,6 +463,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -468,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +515,7 @@
 				242AF9D31FDCA4B20053AA26 /* SearchOfferDetailsViewController.swift in Sources */,
 				24D8944B1FDD95E100A5E09C /* OffersTableViewController.swift in Sources */,
 				2440046C1FDD82F30032EB7E /* UserProfileViewController.swift in Sources */,
+				241F3B571FEF324000D07308 /* CVResponse.swift in Sources */,
 				24B9B1D21FD468BB00CD0392 /* Equipment.swift in Sources */,
 				242AF9CA1FDC90750053AA26 /* SearchOffersTableViewController.swift in Sources */,
 				24B9B1D81FD468E100CD0392 /* Offer.swift in Sources */,
@@ -532,6 +541,7 @@
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,
 				24DFACD91FE1D94100B21D4F /* Company.swift in Sources */,
 				246AB52A1FEEA3CE00AB3B68 /* String+html.swift in Sources */,
+				241F3B591FEF324900D07308 /* CV.swift in Sources */,
 				241F3B4F1FEEF1FC00D07308 /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

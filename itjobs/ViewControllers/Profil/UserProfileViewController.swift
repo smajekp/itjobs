@@ -7,21 +7,32 @@
 //
 
 import UIKit
+import Alamofire
+import Photos
+import SKPhotoBrowser
 
-class UserProfileViewController: UIViewController {
+class UserProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var userView: UIView!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var addCVButton: UIButton!
+    @IBOutlet weak var deleteCVButton: UIButton!
+    @IBOutlet weak var loadingPhotoLabel: UILabel!
     
     var userResponse: User!
+    var cvResponse: CV!
     
     var activityView = UIActivityIndicatorView()
+    var activityViewImage = UIActivityIndicatorView()
     
     let defaults = UserDefaults.standard
     var logoutReponse = StatusResponse()
+    
+    let imagePicker = UIImagePickerController()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
@@ -36,13 +47,106 @@ class UserProfileViewController: UIViewController {
         let user_id = defaults.object(forKey: "user_id") as? String
         if let user_id = user_id {
             getUser(userId: Int(user_id)!)
+            getCV(userId: Int(user_id)!)
         }
+    
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
+        self.loadingPhotoLabel.isHidden = true
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(UserProfileViewController.tapDetected))
+        self.image.isUserInteractionEnabled = true
+        self.image.addGestureRecognizer(singleTap)
+        
+    }
+    
+    //Action
+    @objc func tapDetected() {
+        // 1. create SKPhoto Array from UIImage
+        var images = [SKPhoto]()
+        let photo = SKPhoto.photoWithImage(self.image.image!)// add some UIImage
+        images.append(photo)
+        
+        // 2. create PhotoBrowser Instance, and present from your viewController.
+        let browser = SKPhotoBrowser(photos: images)
+        browser.initializePageIndex(0)
+        self.present(browser, animated: true, completion: {})
     }
 
+    @IBAction func loadImageButtonTapped(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func deleteCVTapped(_ sender: Any) {
+        let user_id = self.defaults.object(forKey: "user_id") as? String
+        if let user_id = user_id {
+            self.updateCV(userId: Int(user_id)!, cv: "")
+            self.image.image = nil
+            self.deleteCVButton.isHidden = true
+            self.addCVButton.isHidden = false
+        }
+    }
+    
+    @objc  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            image.contentMode = .scaleAspectFit
+            let imgData = UIImageJPEGRepresentation(pickedImage, 0.2)!
+            
+            let uuid = NSUUID().uuidString + ".jpg"
+            
+            Alamofire.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(imgData, withName: "fileset",fileName: uuid, mimeType: "image/jpg")
+            },
+                             to:"http://vps447923.ovh.net/images/uploadimages.php")
+            { (result) in
+                switch result {
+                case .success(let upload, _, _):
+                    
+                    self.loadingPhotoLabel.isHidden = false
+                    self.activityViewImage = UIActivityIndicatorView(activityIndicatorStyle: .white)
+                    self.activityViewImage.center = CGPoint(x: self.image.center.x,y: self.image.center.y - 225);
+                    self.activityViewImage.startAnimating()
+                    self.image.addSubview(self.activityViewImage)
+                    
+                    upload.uploadProgress(closure: { (progress) in
+                        print("Upload Progress: \(progress.fractionCompleted)")
+                    })
+                    
+                    upload.responseJSON { response in
+                        print(response.result.value)
+                        self.activityViewImage.removeFromSuperview()
+                        self.image.image = pickedImage
+                        
+                        let user_id = self.defaults.object(forKey: "user_id") as? String
+                        if let user_id = user_id {
+                            self.updateCV(userId: Int(user_id)!, cv: uuid)
+                        }
+                        self.deleteCVButton.isHidden = false
+                        self.addCVButton.isHidden = true
+                        self.loadingPhotoLabel.isHidden = true
+    
+                    }
+                    
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+            }
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -89,6 +193,18 @@ class UserProfileViewController: UIViewController {
         })
     }
     
+    func updateCV(userId: Int, cv: String) {
+        let userService = UserService()
+        userService.updateCV(userId: userId, cv: cv, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.userResponse = responseObject
+                }
+            }
+            return
+        })
+    }
+    
     func getUser(userId: Int) {
         let userService = UserService()
         userService.getUser(userId: userId, completionHandler: { responseObject, error in
@@ -102,6 +218,30 @@ class UserProfileViewController: UIViewController {
                     
                     self.userView.isHidden = false
                     self.activityView.removeFromSuperview()
+                }
+            }
+            return
+        })
+    }
+    
+    func getCV(userId: Int) {
+        let userService = UserService()
+        userService.getCV(userId: userId, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.cvResponse = responseObject
+                    
+                    self.addCVButton.isHidden = true
+                    
+                    let urlString: String = Constants.baseURLImage + self.cvResponse.cv!
+                    let imageUrl = URL(string: urlString)
+                    let image = UIImage(named: "placeholder-image")
+                    self.image.kf.setImage(with: imageUrl, placeholder: image)
+                    
+//                    self.userView.isHidden = false
+//                    self.activityView.removeFromSuperview()
+                } else {
+                    self.deleteCVButton.isHidden = true
                 }
             }
             return
