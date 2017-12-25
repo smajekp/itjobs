@@ -1265,7 +1265,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="upB-Lg-ALU" kind="show" id="gky-xW-zMf"/>
+                                                            <segue destination="upB-Lg-ALU" kind="show" identifier="showTest" id="gky-xW-zMf"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-C5-Vqm">
@@ -1352,6 +1352,7 @@
                         <outlet property="salaryLabel" destination="ct0-z5-nuw" id="VIl-JM-lZk"/>
                         <outlet property="salaryStackView" destination="XzB-ZR-8PR" id="Ftg-cv-ZgI"/>
                         <outlet property="technologiesElements" destination="gtx-ed-odD" id="gbm-wk-cGA"/>
+                        <outlet property="testButton" destination="fDH-gj-Gdj" id="jGf-Nq-uHS"/>
                         <outlet property="titleLabel" destination="8h5-1c-wbW" id="ZyA-VF-vQS"/>
                         <outlet property="titleStackView" destination="Jkz-8D-H51" id="WkW-Zr-l6d"/>
                         <outlet property="workModeLabel" destination="2Ia-Ks-488" id="sZD-tu-Kw8"/>
@@ -1373,7 +1374,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ubv-7q-23G">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pytanie?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7J-ZE-vDN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ładowanie..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7J-ZE-vDN">
                                 <rect key="frame" x="15" y="89" width="345" height="20"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1387,7 +1388,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Odpowiedź 1">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1402,7 +1403,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Odpowiedź 2">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1417,7 +1418,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Odpowiedź 4">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1432,7 +1433,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Odpowiedź 3">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1485,8 +1486,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Iyu-u1-Emi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koniec testu!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-G8-buv">
-                                <rect key="frame" x="136.5" y="323.5" width="102" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koniec testu!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-G8-buv">
+                                <rect key="frame" x="15" y="323.5" width="345" height="20"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1510,6 +1511,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0p6-G8-buv" firstAttribute="centerX" secondItem="m7T-a2-Rzz" secondAttribute="centerX" id="3FJ-2x-282"/>
+                            <constraint firstItem="yhj-8h-0go" firstAttribute="trailing" secondItem="0p6-G8-buv" secondAttribute="trailing" constant="15" id="CaS-l7-ZhA"/>
+                            <constraint firstItem="0p6-G8-buv" firstAttribute="leading" secondItem="yhj-8h-0go" secondAttribute="leading" constant="15" id="IUm-Xy-bRS"/>
                             <constraint firstItem="yhj-8h-0go" firstAttribute="bottom" secondItem="1Om-RW-LNx" secondAttribute="bottom" constant="20" id="JPE-pR-ZOQ"/>
                             <constraint firstItem="0p6-G8-buv" firstAttribute="centerY" secondItem="m7T-a2-Rzz" secondAttribute="centerY" id="JaH-G0-eSf"/>
                             <constraint firstItem="yhj-8h-0go" firstAttribute="trailing" secondItem="1Om-RW-LNx" secondAttribute="trailing" constant="15" id="afr-8M-S6M"/>

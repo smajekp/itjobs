@@ -45,9 +45,11 @@ class SearchOfferDetailsViewController: UIViewController {
     @IBOutlet weak var offerView: UIView!
     @IBOutlet weak var addToFavourites: UIButton!
     @IBOutlet weak var deleteFromFavourites: UIButton!
+    @IBOutlet weak var testButton: UIButton!
     
     var offer: Offer!
     var offerResponse: Offer!
+    var testId: TestId!
     var statusResponse = StatusResponse()
     var isAdded: Bool = false
     
@@ -82,6 +84,14 @@ class SearchOfferDetailsViewController: UIViewController {
             getOffer(offerNumber: offerId)
         }
         
+        if let offerId = offer.id {
+            let user_id = defaults.object(forKey: "user_id") as? String
+            if let user_id = user_id {
+                getTestId(offerId: offerId, userId: Int(user_id)!)
+            }
+            
+        }
+
         let user_id = defaults.object(forKey: "user_id") as? String
         if let user_id = user_id {
             if let offerId = offer.id {
@@ -184,6 +194,22 @@ class SearchOfferDetailsViewController: UIViewController {
                 }
             }
             return
+        })
+    }
+    
+    func getTestId(offerId: Int, userId: Int) {
+        let testService = TestService()
+        testService.getTestId(offerId: offerId, userId: userId, completionHandler: { responseObject, error in
+            if error == nil {
+                if let responseObject = responseObject {
+                    self.testId = responseObject
+                    self.testButton.isHidden = false
+                } else {
+                    self.testButton.isHidden = true
+                }
+            } else {
+                 self.testButton.isHidden = true
+            }
         })
     }
     
@@ -387,6 +413,16 @@ class SearchOfferDetailsViewController: UIViewController {
             }
             return
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTest" {
+            if (segue.destination is TestViewController) {
+                let detailsController = segue.destination as? TestViewController
+                    detailsController?.offer = self.offer
+                    detailsController?.testId = self.testId
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
