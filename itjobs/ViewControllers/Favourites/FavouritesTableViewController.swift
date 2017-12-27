@@ -34,8 +34,13 @@ class FavouritesTableViewController: UITableViewController {
         }
         
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            getFavouritesOffers(userId: Int(user_id)!)
+        if user_id != nil && user_id != "" {
+            getFavouritesOffers(userId: Int(user_id!)!)
+        } else {
+            self.activityView.removeFromSuperview()
+            self.tableView.reloadData()
+            let swiftMessage = SwiftMessage()
+            swiftMessage.errorMessage(title: "Zaloguj się!", body: "Aby móc dodawać oferty do ulubionych")
         }
 
     }
