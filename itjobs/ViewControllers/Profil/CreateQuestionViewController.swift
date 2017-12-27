@@ -45,8 +45,8 @@ class CreateQuestionViewController: UIViewController, UIPickerViewDelegate, UIPi
         createPickerWithToolbar(picker: offersPicker, textField: offersTextField)
         
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            getOffersPicker(userId: Int(user_id)!)
+        if user_id != nil && user_id != "" {
+            getOffersPicker(userId: Int(user_id!)!)
         }
         
         self.question.delegate = self

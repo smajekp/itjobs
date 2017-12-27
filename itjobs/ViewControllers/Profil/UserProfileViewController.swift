@@ -61,10 +61,10 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         }
             
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            getUser(userId: Int(user_id)!)
+        if user_id != nil && user_id != "" {
+            getUser(userId: Int(user_id!)!)
             if (user_type == "user") {
-                getCV(userId: Int(user_id)!)
+                getCV(userId: Int(user_id!)!)
             }            
         }
     
@@ -103,8 +103,8 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func deleteCVTapped(_ sender: Any) {
         let user_id = self.defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            self.updateCV(userId: Int(user_id)!, cv: "")
+        if user_id != nil && user_id != "" {
+            self.updateCV(userId: Int(user_id!)!, cv: "")
             self.image.image = nil
             self.deleteCVButton.isHidden = true
             self.addCVButton.isHidden = false
@@ -149,8 +149,8 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                         self.image.image = pickedImage
                         
                         let user_id = self.defaults.object(forKey: "user_id") as? String
-                        if let user_id = user_id {
-                            self.updateCV(userId: Int(user_id)!, cv: uuid)
+                        if user_id != nil && user_id != "" {
+                            self.updateCV(userId: Int(user_id!)!, cv: uuid)
                         }
                         self.deleteCVButton.isHidden = false
                         self.loadingPhotoLabel.isHidden = true

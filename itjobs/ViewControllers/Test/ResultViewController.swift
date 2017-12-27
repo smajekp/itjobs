@@ -22,8 +22,8 @@ class ResultViewController: UIViewController {
         self.title = "Wynik"
         
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            addResult(testId: Int(testId.id_test!)!, userId: Int(user_id)!, points: result)
+        if user_id != nil && user_id != "" {
+            addResult(testId: Int(testId.id_test!)!, userId: Int(user_id!)!, points: result)
         }
             
     }

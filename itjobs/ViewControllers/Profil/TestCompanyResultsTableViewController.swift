@@ -35,8 +35,8 @@ class TestCompanyResultsTableViewController: UITableViewController {
         }
         
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
-            getTestCompanyResult(userId: Int(user_id)!)
+        if user_id != nil && user_id != "" {
+            getTestCompanyResult(userId: Int(user_id!)!)
         }
         
     }

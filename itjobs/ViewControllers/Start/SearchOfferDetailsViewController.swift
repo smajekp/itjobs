@@ -95,16 +95,16 @@ class SearchOfferDetailsViewController: UIViewController {
         
         if let offerId = offer.id {
             let user_id = defaults.object(forKey: "user_id") as? String
-            if let user_id = user_id {
-                getTestId(offerId: offerId, userId: Int(user_id)!)
+            if user_id != nil && user_id != "" {
+                getTestId(offerId: offerId, userId: Int(user_id!)!)
             }
             
         }
 
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
+        if user_id != nil && user_id != "" {
             if let offerId = offer.id {
-                isFavouritesAdded(userId: user_id, offerId: String(offerId))
+                isFavouritesAdded(userId: user_id!, offerId: String(offerId))
             }
         }
  
@@ -118,17 +118,17 @@ class SearchOfferDetailsViewController: UIViewController {
  
     @IBAction func addToFavourites(_ sender: Any) {
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
+        if user_id != nil && user_id != "" {
             if let offerId = offer.id {
-                addOfferToFavourites(userId: user_id, offerId: String(offerId))
+                addOfferToFavourites(userId: user_id!, offerId: String(offerId))
             }
         }
     }
     @IBAction func deleteFromFavouritesAction(_ sender: Any) {
         let user_id = defaults.object(forKey: "user_id") as? String
-        if let user_id = user_id {
+        if user_id != nil && user_id != "" {
             if let offerId = offer.id {
-                deleteOfferFromFavourites(userId: user_id, offerId: String(offerId))
+                deleteOfferFromFavourites(userId: user_id!, offerId: String(offerId))
             }
         }
     }
@@ -307,7 +307,9 @@ class SearchOfferDetailsViewController: UIViewController {
                     }
                     
                     if (self.offerResponse.city != nil) {
-                        self.offerDescriptionLabel.text = self.offerResponse.description!.htmlToString
+                        let description = self.offerResponse.description!.folding(options: .diacriticInsensitive, locale: .current)
+                        let swiftyString = description.replacingOccurrences(of: "ł", with: "l")
+                        self.offerDescriptionLabel.text = swiftyString.htmlToString
                     } else {
                         if (self.offerDescriptionStackView != nil) {
                             self.offerDescriptionStackView.removeFromSuperview()
@@ -416,6 +418,9 @@ class SearchOfferDetailsViewController: UIViewController {
                             self.methodologyStackView.removeFromSuperview()
                         }
                     }
+                    
+                    self.offerView.isHidden = false
+                    self.activityView.removeFromSuperview()
                     
 
                 }
