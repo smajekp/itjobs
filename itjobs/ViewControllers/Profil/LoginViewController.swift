@@ -69,6 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     } else if (self.loginResponse.status == "true") {
                         self.defaults.set(true, forKey: "logged")
                         self.defaults.set(self.loginResponse.user_id!, forKey: "user_id")
+                        self.defaults.set(self.loginResponse.user_type!, forKey: "user_type")
                         
                         let swiftMessage = SwiftMessage()
                         swiftMessage.successMessage(title: "Super!", body: "Zalogowano pomyślnie")

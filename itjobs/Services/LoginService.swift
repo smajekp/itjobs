@@ -32,6 +32,9 @@ class LoginService {
                     if baseResponse.user_id != nil {
                         loginResponse.user_id = baseResponse.user_id
                     }
+                    if baseResponse.user_type != nil {
+                        loginResponse.user_type = baseResponse.user_type
+                    }
                     completionHandler(loginResponse, nil)
                 }
             case .failure(let error):

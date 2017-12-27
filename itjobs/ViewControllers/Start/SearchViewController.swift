@@ -178,24 +178,6 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         rangeSlider.numberFormatter.maximumFractionDigits = 0
     }
     
-//    func getOffer(offerNumber: Int) {
-//        let offersService = OffersService()
-//        offersService.getOffer(offerNumber: offerNumber, completionHandler: { responseObject, error in
-//            if error == nil {
-//                //print(responseObject!)
-//                if let responseObject = responseObject {
-//                    self.result = responseObject
-//                    self.setupView(resource: responseObject)
-//                    //self.showLoginVC()
-//                }
-//            }
-//            return
-//        })
-//    }
-//
-//    func setupView(resource: Offer) {
-//        self.label.text = resource.city
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchSegue" {

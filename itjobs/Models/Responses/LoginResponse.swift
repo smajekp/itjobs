@@ -13,6 +13,7 @@ class LoginResponse:Mappable {
     var status : String?
     var token : String?
     var user_id : String?
+    var user_type : String?
     
     init() {
     }
@@ -25,6 +26,7 @@ class LoginResponse:Mappable {
         status <- map["status"]
         token <- map["token"]
         user_id <- map["user_id"]
+        user_type <- map["user_type"]
     }
     
     

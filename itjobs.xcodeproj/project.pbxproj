@@ -72,6 +72,13 @@
 		24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */; };
 		24DFACD91FE1D94100B21D4F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACD81FE1D94100B21D4F /* Company.swift */; };
 		24DFACDB1FE1DAD600B21D4F /* CompaniesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */; };
+		24F126BF1FF3DBB6001D5182 /* TestUserResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126BE1FF3DBB6001D5182 /* TestUserResultResponse.swift */; };
+		24F126C11FF3DBD7001D5182 /* TestUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C01FF3DBD7001D5182 /* TestUserResult.swift */; };
+		24F126C31FF3DC66001D5182 /* TestResultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C21FF3DC66001D5182 /* TestResultsService.swift */; };
+		24F126C51FF3DE18001D5182 /* TestUserResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C41FF3DE18001D5182 /* TestUserResultTableViewCell.swift */; };
+		24F126C71FF3DF67001D5182 /* TestUserResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */; };
+		24F126C91FF3F066001D5182 /* TestCompanyResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */; };
+		24F126CB1FF3F07F001D5182 /* TestCompanyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */; };
 		326D61E1992C39FF9F4D61BC /* Pods_itjobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +151,13 @@
 		24DFACD61FE1D8A000B21D4F /* CompaniesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesService.swift; sourceTree = "<group>"; };
 		24DFACD81FE1D94100B21D4F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		24DFACDA1FE1DAD600B21D4F /* CompaniesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesResponse.swift; sourceTree = "<group>"; };
+		24F126BE1FF3DBB6001D5182 /* TestUserResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserResultResponse.swift; sourceTree = "<group>"; };
+		24F126C01FF3DBD7001D5182 /* TestUserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserResult.swift; sourceTree = "<group>"; };
+		24F126C21FF3DC66001D5182 /* TestResultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultsService.swift; sourceTree = "<group>"; };
+		24F126C41FF3DE18001D5182 /* TestUserResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserResultTableViewCell.swift; sourceTree = "<group>"; };
+		24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserResultsTableViewController.swift; sourceTree = "<group>"; };
+		24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultResponse.swift; sourceTree = "<group>"; };
+		24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResult.swift; sourceTree = "<group>"; };
 		787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itjobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD29C277B0E8E1A88286E3 /* Pods-itjobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */,
+				24F126C41FF3DE18001D5182 /* TestUserResultTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 				242AF9921FDC7C140053AA26 /* LoginViewController.swift */,
 				2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */,
 				2495B6331FE18D790042D25B /* RegistrationViewController.swift */,
+				24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -257,6 +273,8 @@
 				241F3B561FEF324000D07308 /* CVResponse.swift */,
 				24142EC81FF07E1F00C577F5 /* TestResponse.swift */,
 				24142ECE1FF0891100C577F5 /* TestIdResponse.swift */,
+				24F126BE1FF3DBB6001D5182 /* TestUserResultResponse.swift */,
+				24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -275,6 +293,8 @@
 				241F3B501FEEF20600D07308 /* User.swift */,
 				24142ECA1FF07E4900C577F5 /* Question.swift */,
 				24142ED01FF0893100C577F5 /* TestId.swift */,
+				24F126C01FF3DBD7001D5182 /* TestUserResult.swift */,
+				24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +355,7 @@
 				241F3B521FEEF25500D07308 /* UserService.swift */,
 				241F3B541FEF07E700D07308 /* FavouritesService.swift */,
 				24142ECC1FF07E9B00C577F5 /* TestService.swift */,
+				24F126C21FF3DC66001D5182 /* TestResultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -537,9 +558,12 @@
 				24DFACDB1FE1DAD600B21D4F /* CompaniesResponse.swift in Sources */,
 				2495B63B1FE1AB250042D25B /* StatusResponse.swift in Sources */,
 				24847EF91FD2EB490002B1F5 /* SearchViewController.swift in Sources */,
+				24F126C11FF3DBD7001D5182 /* TestUserResult.swift in Sources */,
+				24F126CB1FF3F07F001D5182 /* TestCompanyResult.swift in Sources */,
 				2495B6371FE1A1080042D25B /* SwiftMessage.swift in Sources */,
 				242AF9BD1FDC8C8E0053AA26 /* UIColor+HexColor.swift in Sources */,
 				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
+				24F126C71FF3DF67001D5182 /* TestUserResultsTableViewController.swift in Sources */,
 				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
 				242AF9D31FDCA4B20053AA26 /* SearchOfferDetailsViewController.swift in Sources */,
 				24D8944B1FDD95E100A5E09C /* OffersTableViewController.swift in Sources */,
@@ -555,21 +579,25 @@
 				24142EC91FF07E2000C577F5 /* TestResponse.swift in Sources */,
 				2495B6301FE183650042D25B /* LoginService.swift in Sources */,
 				2495B6341FE18D790042D25B /* RegistrationViewController.swift in Sources */,
+				24F126C31FF3DC66001D5182 /* TestResultsService.swift in Sources */,
 				24C931AE1FEB09660005C7AC /* RegisterService.swift in Sources */,
 				2495B6321FE183A90042D25B /* LoginResponse.swift in Sources */,
 				24142ECF1FF0891100C577F5 /* TestIdResponse.swift in Sources */,
+				24F126BF1FF3DBB6001D5182 /* TestUserResultResponse.swift in Sources */,
 				2451B00B1FDDB38000E9BB1C /* OffersResponse.swift in Sources */,
 				243DA4121FD42BFF00D073C2 /* OffersService.swift in Sources */,
 				241F3B531FEEF25500D07308 /* UserService.swift in Sources */,
 				24DFACD51FE1D26200B21D4F /* UITextField+PlaceholderColor.swift in Sources */,
 				24142ED11FF0893100C577F5 /* TestId.swift in Sources */,
 				24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */,
+				24F126C91FF3F066001D5182 /* TestCompanyResultResponse.swift in Sources */,
 				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
 				241F3B511FEEF20600D07308 /* User.swift in Sources */,
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
 				24847EF71FD2EB490002B1F5 /* AppDelegate.swift in Sources */,
 				24B9B1D41FD468CD00CD0392 /* OfferResponse.swift in Sources */,
 				24142EC51FF057AB00C577F5 /* TestViewController.swift in Sources */,
+				24F126C51FF3DE18001D5182 /* TestUserResultTableViewCell.swift in Sources */,
 				24142ECB1FF07E4900C577F5 /* Question.swift in Sources */,
 				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
 				24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */,

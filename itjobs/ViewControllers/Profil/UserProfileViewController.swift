@@ -22,9 +22,14 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var addCVButton: UIButton!
     @IBOutlet weak var deleteCVButton: UIButton!
     @IBOutlet weak var loadingPhotoLabel: UILabel!
+    @IBOutlet weak var cvView: UIView!
+    @IBOutlet weak var showMyTests: UIButton!
+    @IBOutlet weak var showUsersTests: UIButton!
+    @IBOutlet weak var createTests: UIButton!
     
     var userResponse: User!
     var cvResponse: CV!
+    var updateResponse: StatusResponse!
     
     var activityView = UIActivityIndicatorView()
     var activityViewImage = UIActivityIndicatorView()
@@ -44,6 +49,17 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         activityView.startAnimating()
         self.view.addSubview(activityView)
         
+        let user_type = defaults.object(forKey: "user_type") as? String
+        if user_type != nil {
+            if (user_type == "user") {
+                showUsersTests.isHidden = true
+                createTests.isHidden = true
+            } else {
+                cvView.isHidden = true
+                showMyTests.isHidden = true
+            }
+        }
+            
         let user_id = defaults.object(forKey: "user_id") as? String
         if let user_id = user_id {
             getUser(userId: Int(user_id)!)
@@ -90,12 +106,17 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
             self.image.image = nil
             self.deleteCVButton.isHidden = true
             self.addCVButton.isHidden = false
+            
+            let urlString: String = Constants.baseURLImages + "no-cv-image.png"
+            let imageUrl = URL(string: urlString)
+            let image = UIImage(named: "placeholder-image")
+            self.image.kf.setImage(with: imageUrl, placeholder: image)
         }
     }
     
     @objc  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            image.contentMode = .scaleAspectFit
+            image.contentMode = .scaleToFill
             let imgData = UIImageJPEGRepresentation(pickedImage, 0.2)!
             
             let uuid = NSUUID().uuidString + ".jpg"
@@ -114,6 +135,8 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                     self.activityViewImage.startAnimating()
                     self.image.addSubview(self.activityViewImage)
                     
+                    self.addCVButton.isHidden = true
+                    
                     upload.uploadProgress(closure: { (progress) in
                         print("Upload Progress: \(progress.fractionCompleted)")
                     })
@@ -128,7 +151,6 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                             self.updateCV(userId: Int(user_id)!, cv: uuid)
                         }
                         self.deleteCVButton.isHidden = false
-                        self.addCVButton.isHidden = true
                         self.loadingPhotoLabel.isHidden = true
     
                     }
@@ -172,6 +194,7 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                     if (self.logoutReponse.status == "Logout success") {
                         self.defaults.set(false, forKey: "logged")
                         self.defaults.set("", forKey: "user_id")
+                        self.defaults.set("", forKey: "user_type")
                         
                         let swiftMessage = SwiftMessage()
                         swiftMessage.successMessage(title: "Super!", body: "Wylogowano pomyślnie")
@@ -198,7 +221,7 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         userService.updateCV(userId: userId, cv: cv, completionHandler: { responseObject, error in
             if error == nil {
                 if let responseObject = responseObject {
-                    self.userResponse = responseObject
+                    self.updateResponse = responseObject
                 }
             }
             return
@@ -230,22 +253,37 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
             if error == nil {
                 if let responseObject = responseObject {
                     self.cvResponse = responseObject
+                           
+                    if (self.cvResponse.cv != nil) {
+                        let urlString: String = Constants.baseURLImage + self.cvResponse.cv!
+                        let imageUrl = URL(string: urlString)
+                        let image = UIImage(named: "placeholder-image")
+                        self.image.kf.setImage(with: imageUrl, placeholder: image)
+                        self.addCVButton.isHidden = true
+                    } else {
+                        let urlString: String = Constants.baseURLImages + "no-cv-image.png"
+                        let imageUrl = URL(string: urlString)
+                        let image = UIImage(named: "placeholder-image")
+                        self.image.kf.setImage(with: imageUrl, placeholder: image)
+                        self.deleteCVButton.isHidden = true
+                    }
                     
-                    self.addCVButton.isHidden = true
-                    
-                    let urlString: String = Constants.baseURLImage + self.cvResponse.cv!
-                    let imageUrl = URL(string: urlString)
-                    let image = UIImage(named: "placeholder-image")
-                    self.image.kf.setImage(with: imageUrl, placeholder: image)
-                    
-//                    self.userView.isHidden = false
-//                    self.activityView.removeFromSuperview()
-                } else {
-                    self.deleteCVButton.isHidden = true
                 }
             }
             return
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "testUserResultSegue" {
+            if (segue.destination is TestUserResultsTableViewController) {
+                let tableViewController = segue.destination as? TestUserResultsTableViewController
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Powrót"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
     }
     
 }
