@@ -80,6 +80,15 @@ class SearchOfferDetailsViewController: UIViewController {
             }
         }
         
+        let user_type = defaults.object(forKey: "user_type") as? String
+        if user_type != nil {
+            if (user_type == "user") {
+                testButton.isHidden = false
+            } else {
+                testButton.isHidden = true
+            }
+        }
+        
         if let offerId = offer.id {
             getOffer(offerNumber: offerId)
         }

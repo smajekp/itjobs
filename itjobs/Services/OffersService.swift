@@ -64,9 +64,17 @@ class OffersService {
     
     func findOffersRequest(title: String, lowerSalary: String, upperSalary: String, haveSalary: String, language: String, city: String, completionHandler: @escaping ([Offer]?, NSError?) -> ()){
         
+        var titleString = ""
+        if (title.count > 0) {
+             titleString = "&title=" + title
+        }
+        
         var languageString = ""
         if (language != "engpl") {
             languageString = "&language=" + String(language)
+            if (language == "") {
+                languageString = ""
+            }
         }
         
         var cityString = city
@@ -75,6 +83,27 @@ class OffersService {
                 cityString = "Warsaw"
             }
         }
+        
+        if (city == "Kraków") {
+            cityString = "Krakow"
+        }
+        
+        if (city == "Łódź") {
+            cityString = "Lodz"
+        }
+        
+        if (city == "Wrocław") {
+            cityString = "Wroclaw"
+        }
+        
+        if (city == "Jelenia Góra") {
+            cityString = "Jelenia Gora"
+        }
+        
+        if (city == "Poznań") {
+            cityString = "Poznan"
+        }
+        
         if (city == "Wszystkie") {
             cityString = ""
         }
@@ -84,9 +113,17 @@ class OffersService {
             salary = "&lower_salary=" + String(lowerSalary) + "&upper_salary=" + String(upperSalary)
         }
         
-        let path: String = "offer?title=" + String(title) + salary + "&have_salary=" + String(haveSalary) + languageString + "&city=" + String(cityString)
+        var haveSalaryString = ""
+        if (salary == "" && titleString == "") {
+            haveSalaryString = "have_salary="
+        } else {
+            haveSalaryString = "&have_salary="
+        }
         
-        let url = Constants.baseURL + path
+        let path: String = "offer?" + String(titleString) + salary + haveSalaryString + String(haveSalary) + languageString + "&city=" + String(cityString)
+        
+        let pathString: String = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let url = Constants.baseURL + pathString
         
         Alamofire.request(url,  method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<OffersResponse>) in
             switch response.result {
@@ -94,6 +131,32 @@ class OffersService {
                 if let baseResponse = response.result.value {
                     if baseResponse.result != nil {
                         let resultResponse: [Offer] = baseResponse.result!
+                        completionHandler(resultResponse, nil)
+                    } else {
+                        completionHandler(nil, nil)
+                    }
+                }
+            case .failure(let error):
+                completionHandler(nil, error as NSError)
+            }
+            
+        }
+    }
+    
+    func getOffersPicker(userId: Int, completionHandler: @escaping ([CompanyPicker]?, NSError?) -> ()){
+        getOffersPickerRequest(userId: userId, completionHandler: completionHandler)
+    }
+    
+    func getOffersPickerRequest(userId: Int, completionHandler: @escaping ([CompanyPicker]?, NSError?) -> ()){
+        let path: String = "offers_test/" + String(userId)
+        let url = Constants.baseURL + path
+        
+        Alamofire.request(url,  method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<CompanyPickerResponse>) in
+            switch response.result {
+            case .success:
+                if let baseResponse = response.result.value {
+                    if baseResponse.result != nil {
+                        let resultResponse: [CompanyPicker] = baseResponse.result!
                         completionHandler(resultResponse, nil)
                     }
                 }

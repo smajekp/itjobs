@@ -611,9 +611,12 @@
                                                     <constraint firstAttribute="height" constant="40" id="drv-gS-3uA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                                <state key="normal" title="Utwórz test">
+                                                <state key="normal" title="Dodaj pytania">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="jFD-x1-H3o" kind="show" identifier="createQuestionSegue" id="8h6-Uu-u4d"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZY-bc-4lP">
                                                 <rect key="frame" x="0.0" y="165" width="345" height="40"/>
@@ -834,6 +837,176 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHb-VO-4aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1778.4000000000001" y="2450.8245877061472"/>
+        </scene>
+        <!--Create Question View Controller-->
+        <scene sceneID="d8t-ah-AXJ">
+            <objects>
+                <viewController id="jFD-x1-H3o" customClass="CreateQuestionViewController" customModule="itjobs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVm-xU-w76">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yrJ-Bn-Wxm">
+                                <rect key="frame" x="15" y="79" width="345" height="345"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-X8-ing">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz ofertę" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ib-YR-Pzq">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-- Wybierz --" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypx-Un-jvF">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hdp-dK-QbB">
+                                        <rect key="frame" x="0.0" y="60" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pytanie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5J-MN-Kah">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz treść pytania" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LgW-3u-JEE">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TYh-Ts-oed">
+                                        <rect key="frame" x="0.0" y="120" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pierwsza odpowiedź" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQL-Vm-AyA">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz treść odpowiedzi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYd-v3-jLl">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-ew-QGx">
+                                        <rect key="frame" x="0.0" y="180" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Druga odpowiedź" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-Ss-sks">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz treść odpowiedzi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="reU-wH-Hhf">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-X2-HE0">
+                                        <rect key="frame" x="0.0" y="240" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trzecia odpowiedź" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isy-Pq-pdD">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz treść odpowiedzi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-AL-72T">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-A7-N5C">
+                                        <rect key="frame" x="0.0" y="300" width="345" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Czwarta odpowiedź" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tap-O6-3hB">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Wpisz treść odpowiedzi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6r-Yc-Cgg">
+                                                <rect key="frame" x="0.0" y="25" width="345" height="20"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIA-Uj-g47">
+                                <rect key="frame" x="15" y="607" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="58k-0j-FkS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Dodaj pytanie do testu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addQuestion:" destination="jFD-x1-H3o" eventType="touchUpInside" id="gRq-WW-icH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pierwsza podawana odpowiedź jest odpowiedzią prawidłową. Odpowiedzi dla użytkownika są pokazywane w losowej kolejności." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s2-dR-KVF">
+                                <rect key="frame" x="15" y="529" width="345" height="53"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sEc-iw-im3" firstAttribute="bottom" secondItem="TIA-Uj-g47" secondAttribute="bottom" constant="20" id="16p-i6-ovy"/>
+                            <constraint firstItem="sEc-iw-im3" firstAttribute="trailing" secondItem="TIA-Uj-g47" secondAttribute="trailing" constant="15" id="65V-Kj-Pxm"/>
+                            <constraint firstItem="6s2-dR-KVF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yrJ-Bn-Wxm" secondAttribute="bottom" constant="50" id="BF1-eG-kYw"/>
+                            <constraint firstItem="sEc-iw-im3" firstAttribute="trailing" secondItem="6s2-dR-KVF" secondAttribute="trailing" constant="15" id="FET-yc-Vk5"/>
+                            <constraint firstItem="6s2-dR-KVF" firstAttribute="leading" secondItem="sEc-iw-im3" secondAttribute="leading" constant="15" id="Fx5-it-Eyq"/>
+                            <constraint firstItem="yrJ-Bn-Wxm" firstAttribute="leading" secondItem="sEc-iw-im3" secondAttribute="leading" constant="15" id="JYx-rn-yrG"/>
+                            <constraint firstItem="sEc-iw-im3" firstAttribute="trailing" secondItem="yrJ-Bn-Wxm" secondAttribute="trailing" constant="15" id="aqe-uc-Z8Z"/>
+                            <constraint firstItem="yrJ-Bn-Wxm" firstAttribute="top" secondItem="sEc-iw-im3" secondAttribute="top" constant="15" id="rrd-8B-9kp"/>
+                            <constraint firstItem="TIA-Uj-g47" firstAttribute="top" secondItem="6s2-dR-KVF" secondAttribute="bottom" constant="25" id="tvF-T9-J5o"/>
+                            <constraint firstItem="TIA-Uj-g47" firstAttribute="leading" secondItem="sEc-iw-im3" secondAttribute="leading" constant="15" id="unm-si-Gjb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sEc-iw-im3"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer1" destination="SYd-v3-jLl" id="tg7-PA-y5V"/>
+                        <outlet property="answer2" destination="reU-wH-Hhf" id="924-P2-Tk5"/>
+                        <outlet property="answer3" destination="wHJ-AL-72T" id="unS-c0-ngA"/>
+                        <outlet property="answer4" destination="w6r-Yc-Cgg" id="QNo-VX-hoe"/>
+                        <outlet property="offersTextField" destination="ypx-Un-jvF" id="IHT-K7-YHH"/>
+                        <outlet property="question" destination="LgW-3u-JEE" id="mi1-XJ-fOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYu-pc-FF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="2707"/>
         </scene>
         <!--User Test Result View Controller-->
         <scene sceneID="KUD-Jo-CJR">

@@ -13,7 +13,7 @@ import ObjectMapper
 import RangeSeekSlider
 import M13Checkbox
 
-class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var phraseTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
@@ -32,7 +32,7 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var minPriceValue: Int = 1000
     var maxPriceValue: Int = 10000
     
-    var cityArray = ["Wszystkie","Chorzów", "Katowice", "Gliwice", "Jelenia Góra", "Kraków", "Łódź", "Opole", "Poznań", "Szczecin", "Warszawa", "Wrocław"]
+    var cityArray = ["Wszystkie","Katowice", "Gliwice", "Jelenia Góra", "Kraków", "Łódź", "Opole", "Poznań", "Szczecin", "Warszawa", "Wrocław"]
     let cityPicker = UIPickerView()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,11 +57,12 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         cityTextField.placeholderColor(color: UIColor.white)
         cityTextField.setBottomBorder()
         
+        self.phraseTextField.delegate = self
+        self.cityTextField.delegate = self
+        
         setupRangeSlider()
 
         createCityPicker()
-     
-       // getOffer(offerNumber: 171)
     }
     
     func createCityPicker() {
@@ -191,6 +192,11 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                     tableViewController?.cityValue = self.cityTextField.text
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 
     override func didReceiveMemoryWarning() {

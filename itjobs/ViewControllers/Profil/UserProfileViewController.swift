@@ -63,7 +63,9 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         let user_id = defaults.object(forKey: "user_id") as? String
         if let user_id = user_id {
             getUser(userId: Int(user_id)!)
-            getCV(userId: Int(user_id)!)
+            if (user_type == "user") {
+                getCV(userId: Int(user_id)!)
+            }            
         }
     
     }
@@ -294,6 +296,17 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                 navigationItem.backBarButtonItem = backItem
             }
         }
+        
+        if segue.identifier == "createQuestionSegue" {
+            if (segue.destination is CreateQuestionViewController) {
+                let tableViewController = segue.destination as? CreateQuestionViewController
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Powrót"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
+ 
     }
     
 }

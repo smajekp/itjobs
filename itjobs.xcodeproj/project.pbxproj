@@ -82,6 +82,9 @@
 		24F126CD1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */; };
 		24F126CF1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CE1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift */; };
 		24F126D11FF40B92001D5182 /* UserTestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */; };
+		24F126D31FF4154C001D5182 /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126D21FF4154C001D5182 /* CreateQuestionViewController.swift */; };
+		24F126D51FF419B4001D5182 /* CompanyPickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126D41FF419B4001D5182 /* CompanyPickerResponse.swift */; };
+		24F126D71FF419C2001D5182 /* CompanyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126D61FF419C2001D5182 /* CompanyPicker.swift */; };
 		326D61E1992C39FF9F4D61BC /* Pods_itjobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +167,9 @@
 		24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultsTableViewController.swift; sourceTree = "<group>"; };
 		24F126CE1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultTableViewCell.swift; sourceTree = "<group>"; };
 		24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTestResultViewController.swift; sourceTree = "<group>"; };
+		24F126D21FF4154C001D5182 /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
+		24F126D41FF419B4001D5182 /* CompanyPickerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPickerResponse.swift; sourceTree = "<group>"; };
+		24F126D61FF419C2001D5182 /* CompanyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPicker.swift; sourceTree = "<group>"; };
 		787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itjobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD29C277B0E8E1A88286E3 /* Pods-itjobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +272,7 @@
 				24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */,
 				24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */,
 				24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */,
+				24F126D21FF4154C001D5182 /* CreateQuestionViewController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 				24142ECE1FF0891100C577F5 /* TestIdResponse.swift */,
 				24F126BE1FF3DBB6001D5182 /* TestUserResultResponse.swift */,
 				24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */,
+				24F126D41FF419B4001D5182 /* CompanyPickerResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				24142ED01FF0893100C577F5 /* TestId.swift */,
 				24F126C01FF3DBD7001D5182 /* TestUserResult.swift */,
 				24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */,
+				24F126D61FF419C2001D5182 /* CompanyPicker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -569,9 +578,11 @@
 				24847EF91FD2EB490002B1F5 /* SearchViewController.swift in Sources */,
 				24F126C11FF3DBD7001D5182 /* TestUserResult.swift in Sources */,
 				24F126CB1FF3F07F001D5182 /* TestCompanyResult.swift in Sources */,
+				24F126D71FF419C2001D5182 /* CompanyPicker.swift in Sources */,
 				2495B6371FE1A1080042D25B /* SwiftMessage.swift in Sources */,
 				242AF9BD1FDC8C8E0053AA26 /* UIColor+HexColor.swift in Sources */,
 				24B9B1D01FD468B000CD0392 /* Bonuses.swift in Sources */,
+				24F126D51FF419B4001D5182 /* CompanyPickerResponse.swift in Sources */,
 				24F126C71FF3DF67001D5182 /* TestUserResultsTableViewController.swift in Sources */,
 				24B9B1D61FD468DB00CD0392 /* Methodology.swift in Sources */,
 				242AF9D31FDCA4B20053AA26 /* SearchOfferDetailsViewController.swift in Sources */,
@@ -588,6 +599,7 @@
 				24142EC91FF07E2000C577F5 /* TestResponse.swift in Sources */,
 				2495B6301FE183650042D25B /* LoginService.swift in Sources */,
 				2495B6341FE18D790042D25B /* RegistrationViewController.swift in Sources */,
+				24F126D31FF4154C001D5182 /* CreateQuestionViewController.swift in Sources */,
 				24F126C31FF3DC66001D5182 /* TestResultsService.swift in Sources */,
 				24C931AE1FEB09660005C7AC /* RegisterService.swift in Sources */,
 				24F126CF1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift in Sources */,

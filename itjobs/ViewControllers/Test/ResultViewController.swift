@@ -30,7 +30,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultText.text = "Koniec testu - Twój wynik to:" + String(result) + " punkty. Wkrótce odezwie się do Ciebie Nasz pracownik HR."
+        resultText.text = "Koniec testu. Wkrótce odezwie się do Ciebie Nasz pracownik HR."
     }
     
     func addResult(testId: Int, userId: Int, points: Int) {

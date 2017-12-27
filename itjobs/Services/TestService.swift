@@ -86,6 +86,35 @@ class TestService {
             
         }
     }
+    
+    func addQuestion(id_offer: String, question: String, answer1: String, answer2 : String, answer3: String, answer4: String, completionHandler: @escaping (StatusResponse?, NSError?) -> ()){
+        addQuestionRequest(id_offer: id_offer, question: question, answer1: answer1, answer2: answer2, answer3: answer3, answer4: answer4, completionHandler: completionHandler)
+    }
+    
+    func addQuestionRequest(id_offer: String, question: String, answer1: String, answer2 : String, answer3: String, answer4: String, completionHandler: @escaping (StatusResponse?, NSError?) -> ()){
+        
+        let path: String = "test_question?id_offer=" + String(id_offer) + "&question=" + String(question) + "&answer1=" + String(answer1) + "&answer2=" + String(answer2) + "&answer3=" + String(answer3) + "&answer4=" + String(answer4)
+        
+        let pathString: String = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        let url = Constants.baseURL + pathString
+        
+        Alamofire.request(url,  method: HTTPMethod.post, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject { (response: DataResponse<StatusResponse>) in
+            switch response.result {
+            case .success:
+                if let baseResponse = response.result.value {
+                    let registerUserResponse = StatusResponse()
+                    if baseResponse.status != nil {
+                        registerUserResponse.status = baseResponse.status
+                    }
+                    completionHandler(registerUserResponse, nil)
+                }
+            case .failure(let error):
+                completionHandler(nil, error as NSError)
+            }
+            
+        }
+    }
  
 }
 
