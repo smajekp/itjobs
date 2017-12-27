@@ -284,6 +284,16 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
                 navigationItem.backBarButtonItem = backItem
             }
         }
+        
+        if segue.identifier == "testCompanyResultSegue" {
+            if (segue.destination is TestCompanyResultsTableViewController) {
+                let tableViewController = segue.destination as? TestCompanyResultsTableViewController
+                
+                let backItem = UIBarButtonItem()
+                backItem.title = "Powrót"
+                navigationItem.backBarButtonItem = backItem
+            }
+        }
     }
     
 }

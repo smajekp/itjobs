@@ -79,6 +79,9 @@
 		24F126C71FF3DF67001D5182 /* TestUserResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */; };
 		24F126C91FF3F066001D5182 /* TestCompanyResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */; };
 		24F126CB1FF3F07F001D5182 /* TestCompanyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */; };
+		24F126CD1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */; };
+		24F126CF1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126CE1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift */; };
+		24F126D11FF40B92001D5182 /* UserTestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */; };
 		326D61E1992C39FF9F4D61BC /* Pods_itjobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +161,9 @@
 		24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserResultsTableViewController.swift; sourceTree = "<group>"; };
 		24F126C81FF3F066001D5182 /* TestCompanyResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultResponse.swift; sourceTree = "<group>"; };
 		24F126CA1FF3F07F001D5182 /* TestCompanyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResult.swift; sourceTree = "<group>"; };
+		24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultsTableViewController.swift; sourceTree = "<group>"; };
+		24F126CE1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompanyResultTableViewCell.swift; sourceTree = "<group>"; };
+		24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTestResultViewController.swift; sourceTree = "<group>"; };
 		787E4D8F3176B8A59CCCC805 /* Pods_itjobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itjobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FD29C277B0E8E1A88286E3 /* Pods-itjobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itjobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itjobs/Pods-itjobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +242,7 @@
 			children = (
 				242AF9CC1FDC90A20053AA26 /* OffersTableViewCell.swift */,
 				24F126C41FF3DE18001D5182 /* TestUserResultTableViewCell.swift */,
+				24F126CE1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -257,6 +264,8 @@
 				2440046B1FDD82F30032EB7E /* UserProfileViewController.swift */,
 				2495B6331FE18D790042D25B /* RegistrationViewController.swift */,
 				24F126C61FF3DF67001D5182 /* TestUserResultsTableViewController.swift */,
+				24F126CC1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift */,
+				24F126D01FF40B92001D5182 /* UserTestResultViewController.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -581,6 +590,7 @@
 				2495B6341FE18D790042D25B /* RegistrationViewController.swift in Sources */,
 				24F126C31FF3DC66001D5182 /* TestResultsService.swift in Sources */,
 				24C931AE1FEB09660005C7AC /* RegisterService.swift in Sources */,
+				24F126CF1FF3F1FB001D5182 /* TestCompanyResultTableViewCell.swift in Sources */,
 				2495B6321FE183A90042D25B /* LoginResponse.swift in Sources */,
 				24142ECF1FF0891100C577F5 /* TestIdResponse.swift in Sources */,
 				24F126BF1FF3DBB6001D5182 /* TestUserResultResponse.swift in Sources */,
@@ -591,6 +601,7 @@
 				24142ED11FF0893100C577F5 /* TestId.swift in Sources */,
 				24DFACD71FE1D8A000B21D4F /* CompaniesService.swift in Sources */,
 				24F126C91FF3F066001D5182 /* TestCompanyResultResponse.swift in Sources */,
+				24F126D11FF40B92001D5182 /* UserTestResultViewController.swift in Sources */,
 				24B9B1DA1FD468E900CD0392 /* Specifics.swift in Sources */,
 				241F3B511FEEF20600D07308 /* User.swift in Sources */,
 				242AF9CE1FDC90A20053AA26 /* OffersTableViewCell.swift in Sources */,
@@ -601,6 +612,7 @@
 				24142ECB1FF07E4900C577F5 /* Question.swift in Sources */,
 				242AF9941FDC7C140053AA26 /* LoginViewController.swift in Sources */,
 				24DFACD31FE1B94400B21D4F /* UIViewController+DismissKeyboard.swift in Sources */,
+				24F126CD1FF3F1DA001D5182 /* TestCompanyResultsTableViewController.swift in Sources */,
 				24D894471FDD93BA00A5E09C /* FavouritesTableViewController.swift in Sources */,
 				24142EC71FF057B800C577F5 /* ResultViewController.swift in Sources */,
 				24DFACD91FE1D94100B21D4F /* Company.swift in Sources */,
